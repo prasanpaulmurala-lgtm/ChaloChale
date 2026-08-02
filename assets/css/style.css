@@ -1,0 +1,9 @@
+.navbar-nav{
+    display: flex;
+    margin-left: 70%;
+    padding-right: 20px;
+}
+
+.carousel-item{
+    height: 880px;
+}
