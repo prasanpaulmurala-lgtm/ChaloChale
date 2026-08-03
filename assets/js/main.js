@@ -404,3 +404,57 @@ document.addEventListener('DOMContentLoaded', function() {
 
     console.log('ChaloChale - Travel Website Loaded Successfully');
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+            // Wishlist functionality
+            document.querySelectorAll('.wishlist-btn-package').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    const heart = this.querySelector('.fa-heart');
+                    if (this.classList.contains('active')) {
+                        heart.style.color = '#FF4757';
+                    } else {
+                        heart.style.color = '#6B7280';
+                    }
+                });
+            });
+
+            // Filter functionality
+            const resetFilters = document.getElementById('resetFilters');
+            if (resetFilters) {
+                resetFilters.addEventListener('click', function() {
+                    document.getElementById('packageSearch').value = '';
+                    document.getElementById('categoryFilter').value = '';
+                    document.getElementById('durationFilter').value = '';
+                    document.getElementById('budgetFilter').value = '';
+                    document.getElementById('ratingFilter').value = '';
+                    
+                    // Show all packages
+                    document.querySelectorAll('.package-card-wrapper').forEach(card => {
+                        card.style.display = 'block';
+                    });
+                });
+            }
+
+            // Package explore button
+            document.querySelectorAll('.btn-explore-package').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const card = this.closest('.package-card-enhanced');
+                    const packageName = card.querySelector('.package-title').textContent;
+                    alert(`Exploring package: ${packageName}\nRedirecting to package details...`);
+                });
+            });
+
+            // Newsletter form
+            const newsletterForm = document.querySelector('.newsletter-section-packages form');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = this.querySelector('input[type="email"]').value;
+                    if (email) {
+                        alert('Thank you for subscribing! You will receive travel inspiration and exclusive deals at: ' + email);
+                        this.reset();
+                    }
+                });
+            }
+        });
