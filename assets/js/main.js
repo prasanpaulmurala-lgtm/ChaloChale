@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Section Fade-in Animation on Scroll
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('section:not(.hero-section)');
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -134,6 +134,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add loading animation
     window.addEventListener('load', function() {
         document.body.style.opacity = '1';
+        
+        // Trigger hero animations
+        const heroSection = document.querySelector('.hero-section');
+        if (heroSection) {
+            heroSection.style.opacity = '1';
+        }
     });
 
     // Counter Animation for Statistics (if added later)
@@ -154,14 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCounter();
     }
 
-    // Parallax Effect for Hero Section
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const hero = document.querySelector('.hero-section');
-        if (hero) {
-            hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
-        }
-    });
+    // Remove parallax effect - using zoom animation instead
 
     // Mobile Menu Close on Link Click
     const navLinks = document.querySelectorAll('.nav-link');

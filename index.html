@@ -7,6 +7,9 @@
     <title>ChaloChale - Explore the World, Create Memories</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -45,48 +48,63 @@
 
     <!-- Hero Section -->
     <section class="hero-section position-relative">
+        <div class="hero-bg position-absolute top-0 start-0 w-100 h-100"></div>
         <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+        <div class="container position-relative z-1 h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-7 hero-content">
+                    <h1 class="hero-title text-white mb-4 fade-in">Explore the World, Create Memories</h1>
+                    <p class="hero-subtitle text-white-50 mb-0 fade-in">Discover amazing places, unique experiences and unforgettable journeys with ChaloChale.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Search Box -->
         <div class="container position-relative z-1">
-            <div class="row align-items-center min-vh-100">
-                <div class="col-lg-8">
-                    <h1 class="display-3 fw-bold text-white mb-4 fade-in">Explore the World, Create Memories</h1>
-                    <p class="lead text-white-50 mb-5 fade-in">Discover amazing places, experience unforgettable journeys, and make every moment count with ChaloChale.</p>
-                    
-                    <!-- Search Box -->
-                    <div class="search-box bg-white rounded-4 shadow-lg p-4 fade-in">
-                        <form class="row g-3">
-                            <div class="col-md-3">
-                                <label class="form-label text-muted small fw-semibold">Destination</label>
-                                <div class="input-group">
-                                    <span class="input-group-text bg-light border-0"><i class="fas fa-map-marker-alt text-primary"></i></span>
-                                    <input type="text" class="form-control border-0 bg-light" placeholder="Where to?">
+            <div class="row">
+                <div class="col-12">
+                    <div class="search-box-wrapper">
+                        <div class="search-box bg-white rounded-pill shadow-lg p-3 p-md-4 float-in">
+                            <form class="row g-2 g-md-3 align-items-center">
+                                <div class="col-12 col-md-3">
+                                    <div class="d-flex align-items-center px-3 py-2">
+                                        <i class="fas fa-map-marker-alt text-primary me-3 fs-5"></i>
+                                        <div class="flex-grow-1">
+                                            <label class="form-label text-muted small fw-semibold mb-0">Where to?</label>
+                                            <input type="text" class="form-control border-0 bg-transparent px-0 py-0 fw-medium" placeholder="Destination">
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3">
-                                <label class="form-label text-muted small fw-semibold">Check-in</label>
-                                <div class="input-group">
-                                    <span class="input-group-text bg-light border-0"><i class="fas fa-calendar text-primary"></i></span>
-                                    <input type="date" class="form-control border-0 bg-light">
+                                <div class="col-12 col-md-3">
+                                    <div class="d-flex align-items-center px-3 py-2 border-start border-end">
+                                        <i class="fas fa-calendar text-primary me-3 fs-5"></i>
+                                        <div class="flex-grow-1">
+                                            <label class="form-label text-muted small fw-semibold mb-0">When</label>
+                                            <input type="date" class="form-control border-0 bg-transparent px-0 py-0 fw-medium">
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3">
-                                <label class="form-label text-muted small fw-semibold">Travelers</label>
-                                <div class="input-group">
-                                    <span class="input-group-text bg-light border-0"><i class="fas fa-users text-primary"></i></span>
-                                    <select class="form-select border-0 bg-light">
-                                        <option>1 Adult</option>
-                                        <option>2 Adults</option>
-                                        <option>3 Adults</option>
-                                        <option>4+ Adults</option>
-                                    </select>
+                                <div class="col-12 col-md-3">
+                                    <div class="d-flex align-items-center px-3 py-2">
+                                        <i class="fas fa-users text-primary me-3 fs-5"></i>
+                                        <div class="flex-grow-1">
+                                            <label class="form-label text-muted small fw-semibold mb-0">Travelers</label>
+                                            <select class="form-select border-0 bg-transparent px-0 py-0 fw-medium">
+                                                <option>1 Guest</option>
+                                                <option>2 Guests</option>
+                                                <option>3 Guests</option>
+                                                <option>4+ Guests</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3 d-flex align-items-end">
-                                <button type="submit" class="btn btn-primary w-100 rounded-pill fw-semibold">
-                                    <i class="fas fa-search me-2"></i>Explore Now
-                                </button>
-                            </div>
-                        </form>
+                                <div class="col-12 col-md-3">
+                                    <button type="submit" class="btn btn-explore w-100 rounded-pill fw-bold text-white">
+                                        Explore Now
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
