@@ -7,3 +7,25 @@
 .carousel-item{
     height: 880px;
 }
+
+.package-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+.package-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.package-card .btn-primary {
+    transition: background-color 0.3s ease;
+}
+
+.package-card .btn-primary:hover {
+    background-color: #0d6efd;
+}
