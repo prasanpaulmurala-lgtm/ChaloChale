@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore amazing destinations worldwide with ChaloChale - Maldives, Swiss Alps, Santorini, Bali, Paris, Dubai, Thailand, and more.">
+    <meta name="keywords" content="travel destinations, tour packages, vacation spots, holiday destinations, ChaloChale">
+    <title>Destinations - ChaloChale | Explore the World</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <!-- Sticky Navigation Bar -->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-plane-departure text-primary me-2"></i>
+                <span class="text-primary">Chalo</span><span class="text-dark">Chale</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-primary fw-semibold" href="destination.html">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="Packages.html">Tour Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+                <button class="btn btn-primary rounded-pill px-4 fw-semibold">Plan Your Trip</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Destinations Hero Section -->
+    <section class="destinations-hero position-relative">
+        <div class="destinations-hero-bg position-absolute top-0 start-0 w-100 h-100"></div>
+        <div class="destinations-hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+        <div class="container position-relative z-1">
+            <div class="row align-items-center min-vh-75">
+                <div class="col-lg-8">
+                    <h1 class="destinations-hero-title text-white mb-4 fade-in">Explore All Destinations</h1>
+                    <p class="destinations-hero-subtitle text-white-50 mb-0 fade-in">Discover amazing places around the world and create unforgettable memories with ChaloChale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter/Search Panel -->
+    <section class="filter-section position-relative z-2">
+        <div class="container">
+            <div class="filter-panel bg-white rounded-4 shadow-lg p-4">
+                <div class="row g-3">
+                    <div class="col-lg-3 col-md-6">
+                        <label class="form-label text-muted small fw-semibold">Search Destination</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light border-0"><i class="fas fa-search text-primary"></i></span>
+                            <input type="text" id="destinationSearch" class="form-control border-0 bg-light" placeholder="Where do you want to go?">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <label class="form-label text-muted small fw-semibold">Category</label>
+                        <select id="categoryFilter" class="form-select border-0 bg-light">
+                            <option value="">All Categories</option>
+                            <option value="beach">Beach & Islands</option>
+                            <option value="mountain">Mountains</option>
+                            <option value="city">City Breaks</option>
+                            <option value="cultural">Cultural</option>
+                            <option value="adventure">Adventure</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <label class="form-label text-muted small fw-semibold">Price Range</label>
+                        <select id="priceFilter" class="form-select border-0 bg-light">
+                            <option value="">Any Price</option>
+                            <option value="budget">Budget ($0-$500)</option>
+                            <option value="mid">Mid-Range ($500-$1500)</option>
+                            <option value="luxury">Luxury ($1500+)</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <label class="form-label text-muted small fw-semibold">Rating</label>
+                        <select id="ratingFilter" class="form-select border-0 bg-light">
+                            <option value="">Any Rating</option>
+                            <option value="5">5 Stars</option>
+                            <option value="4">4+ Stars</option>
+                            <option value="3">3+ Stars</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <label class="form-label text-muted small fw-semibold">Duration</label>
+                        <select id="durationFilter" class="form-select border-0 bg-light">
+                            <option value="">Any Duration</option>
+                            <option value="short">1-3 Days</option>
+                            <option value="medium">4-7 Days</option>
+                            <option value="long">8+ Days</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-1 col-md-6 d-flex align-items-end">
+                        <button id="resetFilters" class="btn btn-outline-primary w-100 rounded-pill fw-semibold">
+                            <i class="fas fa-redo me-1"></i>Reset
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Grid -->
+    <section class="destinations-grid py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-semibold mb-3">Popular Destinations</span>
+                <h2 class="display-5 fw-bold text-dark">Discover Your Next Adventure</h2>
+                <p class="text-muted lead">Explore our handpicked destinations loved by travelers worldwide</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Maldives -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="destination-card-enhanced border-0 shadow-sm h-100">
+                        <div class="position-relative overflow-hidden rounded-top-4">
+                            <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&h=400&fit=crop" class="card-img-top destination-img" alt="Maldives">
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge bg-white text-dark shadow-sm"><i class="fas fa-star text-warning me-1"></i>4.9</span>
+                            </div>
+                            <div class="position-absolute bottom-0 start-0 end-0 p-3 gradient-overlay">
+                                <span class="badge bg-primary text-white">Beach & Islands</span>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="fw-bold mb-0">Maldives</h5>
+                                <span class="text-primary fw-bold">$1,200</span>
+                            </div>
+                            <p class="text-muted small mb-3">Paradise islands with crystal clear waters and luxury overwater villas</p>
+                            <div class="d-flex align-items-center text-muted small mb-3">
+                                <i class="fas fa-clock me-2"></i>
+                                <span>5-7 Days</span>
+                                <i class="fas fa-map-marker-alt ms-3 me-2"></i>
+                                <span>Indian Ocean</span>
+                            </div>
+                            <button class="btn btn-primary w-100 rounded-pill fw-semibold">
+                                <i class="fas fa-compass me-2"></i>Explore Packages
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Swiss Alps -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="destination-card-enhanced border-0 shadow-sm h-100">
+                        <div class="position-relative overflow-hidden rounded-top-4">
+                            <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=600&h=400&fit=crop" class="card-img-top destination-img" alt="Swiss Alps">
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge bg-white text-dark shadow-sm"><i class="fas fa-star text-warning me-1"></i>4.8</span>
+                            </div>
+                            <div class="position-absolute bottom-0 start-0 end-0 p-3 gradient-overlay">
+                                <span class="badge bg-primary text-white">Mountains</span>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="fw-bold mb-0">Swiss Alps</h5>
+                                <span class="text-primary fw-bold">$1,800</span>
+                            </div>
+                            <p class="text-muted small mb-3">Majestic mountains perfect for skiing, hiking and scenic adventures</p>
+                            <div class="d-flex align-items-center text-muted small mb-3">
+                                <i class="fas fa-clock me-2"></i>
+                                <span>4-6 Days</span>
+                                <i class="fas fa-map-marker-alt ms-3 me-2"></i>
+                                <span>Switzerland</span>
+                            </div>
+                            <button class="btn btn-primary w-100 rounded-pill fw-semibold">
+                                <i class="fas fa-compass me-2"></i>Explore Packages
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Santorini -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="destination-card-enhanced border-0 shadow-sm h-100">
+                        <div class="position-relative overflow-hidden rounded-top-4">
+                            <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=600&h=400&fit=crop" class="card-img-top destination-img" alt="Santorini">
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge bg-white text-dark shadow-sm"><i class="fas fa-star text-warning me-1"></i>4.9</span>
+                            </div>
+                            <div class="position-absolute bottom-0 start-0 end-0 p-3 gradient-overlay">
+                                <span class="badge bg-primary text-white">Cultural</span>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="fw-bold mb-0">Santorini</h5>
+                                <span class="text-primary fw-bold">$950</span>
+                            </div>
+                            <p class="text-muted small mb-3">Iconic white buildings with stunning sunsets over the Aegean Sea</p>
+                            <div class="d-flex align-items-center text-muted small mb-3">
+                                <i class="fas fa-clock me-2"></i>
+                                <span>3-5 Days</span>
+                                <i class="fas fa-map-marker-alt ms-3 me-2"></i>
+                                <span>Greece</span>
+                            </div>
+                            <button class="btn btn-primary w-100 rounded-pill fw-semibold">
+                                <i class="fas fa-compass me-2"></i>Explore Packages
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bali -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="destination-card-enhanced border-0 shadow-sm h-100">
+                        <div class="position-relative overflow-hidden rounded-top-4">
+                            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&h=400&fit=crop" class="card-img-top destination-img" alt="Bali">
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge bg-white text-dark shadow-sm"><i class="fas fa-star text-warning me-1"></i>4.7</span>
+                            </div>
+                            <div class="position-absolute bottom-0 start-0 end-0 p-3 gradient-overlay">
+                                <span class="badge bg-primary text-white">Cultural</span>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="fw-bold mb-0">Bali</h5>
+                                <span class="text-primary fw-bold">$800</span>
+                            </div>
+                            <p class="text-muted small mb-3">Tropical paradise with ancient temples, rice terraces and beaches</p>
+                            <div class="d-flex align-items-center text-muted small mb-3">
+                                <i class="fas fa-clock me-2"></i>
+                                <span>5-7 Days</span>
+                                <i class="fas fa-map-marker-alt ms-3 me-2"></i>
+                                <span>Indonesia</span>
+                            </div>
+                            <button class="btn btn-primary w-100 rounded-pill fw-semibold">
+                                <i class="fas fa-compass me-2"></i>Explore Packages
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paris -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="destination-card-enhanced border-0 shadow-sm h-100">
+                        <div class="position-relative overflow-hidden rounded-top-4">
+                            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&h=400&fit=crop" class="card-img-top destination-img" alt="Paris">
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge bg-white text-dark shadow-sm"><i class="fas fa-star text-warning me-1"></i>4.8</span>
+                            </div>
+                            <div class="position-absolute bottom-0 start-0 end-0 p-3 gradient-overlay">
+                                <span class="badge bg-primary text-white">City Breaks</span>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="fw-bold mb-0">Paris</h5>
+                                <span class="text-primary fw-bold">$1,100</span>
+                            </div>
+                            <p class="text-muted small mb-3">City of love with iconic landmarks, art, and exquisite cuisine</p>
+                            <div class="d-flex align-items-center text-muted small mb-3">
+                                <i class="fas fa-clock me-2"></i>
+                                <span>3-5 Days</span>
+                                <i class="fas fa-map-marker-alt ms-3 me-2"></i>
+                                <span>France</span>
+                            </div>
+                            <button class="btn btn-primary w-100 rounded-pill fw-semibold">
+                                <i class="fas fa-compass me-2"></i>Explore Packages
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dubai -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="destination-card-enhanced border-0 shadow-sm h-100">
+                        <div class="position-relative overflow-hidden rounded-top-4">
+                            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&h=400&fit=crop" class="card-img-top destination-img" alt="Dubai">
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge bg-white text-dark shadow-sm"><i class="fas fa-star text-warning me-1"></i>4.6</span>
+                            </div>
+                            <div class="position-absolute bottom-0 start-0 end-0 p-3 gradient-overlay">
+                                <span class="badge bg-primary text-white">City Breaks</span>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="fw-bold mb-0">Dubai</h5>
+                                <span class="text-primary fw-bold">$1,400</span>
+                            </div>
+                            <p class="text-muted small mb-3">Futuristic city with luxury shopping, architecture and desert adventures</p>
+                            <div class="d-flex align-items-center text-muted small mb-3">
+                                <i class="fas fa-clock me-2"></i>
+                                <span>3-4 Days</span>
+                                <i class="fas fa-map-marker-alt ms-3 me-2"></i>
+                                <span>UAE</span>
+                            </div>
+                            <button class="btn btn-primary w-100 rounded-pill fw-semibold">
+                                <i class="fas fa-compass me-2"></i>Explore Packages
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thailand -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="destination-card-enhanced border-0 shadow-sm h-100">
+                        <div class="position-relative overflow-hidden rounded-top-4">
+                            <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=600&h=400&fit=crop" class="card-img-top destination-img" alt="Thailand">
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge bg-white text-dark shadow-sm"><i class="fas fa-star text-warning me-1"></i>4.7</span>
+                            </div>
+                            <div class="position-absolute bottom-0 start-0 end-0 p-3 gradient-overlay">
+                                <span class="badge bg-primary text-white">Adventure</span>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="fw-bold mb-0">Thailand</h5>
+                                <span class="text-primary fw-bold">$700</span>
+                            </div>
+                            <p class="text-muted small mb-3">Beautiful beaches, temples, street food and vibrant nightlife</p>
+                            <div class="d-flex align-items-center text-muted small mb-3">
+                                <i class="fas fa-clock me-2"></i>
+                                <span>5-7 Days</span>
+                                <i class="fas fa-map-marker-alt ms-3 me-2"></i>
+                                <span>Southeast Asia</span>
+                            </div>
+                            <button class="btn btn-primary w-100 rounded-pill fw-semibold">
+                                <i class="fas fa-compass me-2"></i>Explore Packages
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Jaipur -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="destination-card-enhanced border-0 shadow-sm h-100">
+                        <div class="position-relative overflow-hidden rounded-top-4">
+                            <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?w=600&h=400&fit=crop" class="card-img-top destination-img" alt="Jaipur">
+                            <div class="position-absolute top-0 end-0 m-3">
+                                <span class="badge bg-white text-dark shadow-sm"><i class="fas fa-star text-warning me-1"></i>4.5</span>
+                            </div>
+                            <div class="position-absolute bottom-0 start-0 end-0 p-3 gradient-overlay">
+                                <span class="badge bg-primary text-white">Cultural</span>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="fw-bold mb-0">Jaipur</h5>
+                                <span class="text-primary fw-bold">$400</span>
+                            </div>
+                            <p class="text-muted small mb-3">Pink City with magnificent palaces, forts and rich Rajasthani culture</p>
+                            <div class="d-flex align-items-center text-muted small mb-3">
+                                <i class="fas fa-clock me-2"></i>
+                                <span>2-3 Days</span>
+                                <i class="fas fa-map-marker-alt ms-3 me-2"></i>
+                                <span>India</span>
+                            </div>
+                            <button class="btn btn-primary w-100 rounded-pill fw-semibold">
+                                <i class="fas fa-compass me-2"></i>Explore Packages
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-5">
+                <button class="btn btn-outline-primary rounded-pill px-5 py-3 fw-semibold">
+                    <i class="fas fa-plus me-2"></i>Load More Destinations
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section position-relative overflow-hidden">
+        <div class="newsletter-bg position-absolute top-0 start-0 w-100 h-100"></div>
+        <div class="newsletter-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+        <div class="container position-relative z-1 py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-semibold mb-3">Stay Updated</span>
+                    <h2 class="display-5 fw-bold text-white mb-3">Get Travel Inspiration & Exclusive Deals</h2>
+                    <p class="text-white-50 lead">Subscribe to our newsletter and be the first to know about new destinations, special offers, and travel tips.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="newsletter-form bg-white rounded-4 shadow-lg p-4">
+                        <form class="row g-3">
+                            <div class="col-12">
+                                <label class="form-label text-muted small fw-semibold">Email Address</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-light border-0"><i class="fas fa-envelope text-primary"></i></span>
+                                    <input type="email" class="form-control border-0 bg-light" placeholder="Enter your email">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary w-100 rounded-pill fw-semibold">
+                                    <i class="fas fa-paper-plane me-2"></i>Subscribe Now
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand fw-bold text-white mb-3 d-inline-block" href="index.html">
+                        <i class="fas fa-plane-departure text-primary me-2"></i>
+                        <span class="text-primary">Chalo</span><span class="text-white">Chale</span>
+                    </a>
+                    <p class="text-white-50 mb-4">Your trusted travel partner for amazing destinations and unforgettable journeys. We make travel dreams come true with personalized experiences and expert guidance.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3 fs-5"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3 fs-5"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3 fs-5"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3 fs-5"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white fs-5"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none hover-primary">Home</a></li>
+                        <li class="mb-2"><a href="destination.html" class="text-white-50 text-decoration-none hover-primary">Destinations</a></li>
+                        <li class="mb-2"><a href="Packages.html" class="text-white-50 text-decoration-none hover-primary">Tour Packages</a></li>
+                        <li class="mb-2"><a href="index.html#about" class="text-white-50 text-decoration-none hover-primary">About Us</a></li>
+                        <li class="mb-2"><a href="index.html#contact" class="text-white-50 text-decoration-none hover-primary">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-4">Top Destinations</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Maldives</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Swiss Alps</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Santorini</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Bali</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Paris</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-4">Support</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Help Center</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">FAQs</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Terms & Conditions</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Cancellation Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-4">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><i class="fas fa-map-marker-alt text-primary me-2"></i><span class="text-white-50">123 Travel Street, Mumbai, India</span></li>
+                        <li class="mb-3"><i class="fas fa-phone text-primary me-2"></i><span class="text-white-50">+91 98765 43210</span></li>
+                        <li class="mb-3"><i class="fas fa-envelope text-primary me-2"></i><span class="text-white-50">hello@chalochale.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-white-50 small mb-0">&copy; 2024 ChaloChale. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="text-white-50 small mb-0">Made with <i class="fas fa-heart text-danger"></i> for travelers</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
