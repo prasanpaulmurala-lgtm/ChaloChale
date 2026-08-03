@@ -360,9 +360,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Newsletter Form (Destinations page)
-        const newsletterForm = document.querySelector('.newsletter-form form');
-        if (newsletterForm) {
-            newsletterForm.addEventListener('submit', function(e) {
+        const destinationsNewsletterForm = document.querySelector('.newsletter-content form');
+        if (destinationsNewsletterForm) {
+            destinationsNewsletterForm.addEventListener('submit', function(e) {
                 e.preventDefault();
                 const email = this.querySelector('input[type="email"]').value;
                 if (email) {
