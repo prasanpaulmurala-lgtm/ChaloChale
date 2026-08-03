@@ -72,6 +72,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Package Wishlist Button Toggle
+    document.querySelectorAll('.wishlist-btn-package').forEach(btn => {
+        btn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const heart = this.querySelector('.fa-heart');
+            if (this.classList.contains('active')) {
+                heart.style.color = '#FF4757';
+                // Add animation
+                heart.style.transform = 'scale(1.3)';
+                setTimeout(() => {
+                    heart.style.transform = 'scale(1)';
+                }, 200);
+            } else {
+                heart.style.color = '#6B7280';
+            }
+        });
+    });
+
+    // Package Explore Button Click
+    document.querySelectorAll('.btn-explore-package').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const card = this.closest('.package-card-enhanced');
+            const packageName = card.querySelector('.package-title').textContent;
+            alert(`Exploring package: ${packageName}\nRedirecting to package details...`);
+        });
+    });
+
     // Search Form Submission
     const searchForm = document.querySelector('.search-box form');
     if (searchForm) {
