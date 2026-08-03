@@ -1,880 +1,1593 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover handpicked tour packages with ChaloChale - Maldives, Swiss Alps, Bali, Dubai, Santorini, Thailand, Rajasthan, and honeymoon packages.">
-    <meta name="keywords" content="tour packages, vacation packages, travel deals, holiday packages, ChaloChale">
-    <title>Tour Packages - ChaloChale | Handpicked Experiences</title>
+
+    <title>Tour Packages | ChaloChale</title>
+
+    <meta name="description"
+        content="Explore premium tour packages around the world with ChaloChale.">
+
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/packages.css">
 </head>
+
 <body>
-    <!-- Sticky Navigation Bar -->
-    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-white">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
-                <i class="fas fa-plane-departure text-primary me-2"></i>
-                <span class="text-primary">Chalo</span><span class="text-dark">Chale</span>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold fs-3" href="index.html">
+            <i class="fa-solid fa-plane-departure text-warning me-2"></i>
+            <span class="text-warning">Chalo</span>Chale
+        </a>
+
+        <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="destinations.html" class="nav-link">
+                        Destinations
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="Packages.html" class="nav-link active">
+                        Packages
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="About.html" class="nav-link">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+            <a href="#" class="btn btn-warning rounded-pill px-4">
+                Plan Your Trip
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+
+        </div>
+
+    </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="packages-hero">
+
+    <div class="overlay"></div>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-7">
+
+                <h1>
+                    Handpicked Tour Packages
+                </h1>
+
+                <p>
+                    Discover unforgettable journeys carefully curated
+                    for every traveler.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FILTER SECTION ================= -->
+
+<section class="filter-section">
+
+<div class="container">
+
+<div class="filter-box">
+
+<div class="row g-3">
+
+<div class="col-lg-3">
+
+<label>Search</label>
+
+<input
+type="text"
+id="searchPackage"
+class="form-control"
+placeholder="Search packages...">
+
+</div>
+
+<div class="col-lg-2">
+
+<label>Category</label>
+
+<select class="form-select" id="categoryFilter">
+
+<option value="">All</option>
+<option>Beach</option>
+<option>Adventure</option>
+<option>Luxury</option>
+<option>Romantic</option>
+<option>Cultural</option>
+
+</select>
+
+</div>
+
+<div class="col-lg-2">
+
+<label>Duration</label>
+
+<select class="form-select">
+
+<option>Any</option>
+<option>3-5 Days</option>
+<option>6-7 Days</option>
+<option>8+ Days</option>
+
+</select>
+
+</div>
+
+<div class="col-lg-2">
+
+<label>Budget</label>
+
+<select class="form-select">
+
+<option>All</option>
+<option>₹50K</option>
+<option>₹1L</option>
+<option>₹2L</option>
+
+</select>
+
+</div>
+
+<div class="col-lg-2">
+
+<label>Rating</label>
+
+<select class="form-select">
+
+<option>All</option>
+<option>5 Star</option>
+<option>4 Star</option>
+
+</select>
+
+</div>
+
+<div class="col-lg-1 d-flex align-items-end">
+
+<button class="btn btn-outline-warning w-100">
+
+<i class="fa-solid fa-rotate-right"></i>
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= PACKAGE GRID ================= -->
+
+<section class="packages">
+
+<div class="container">
+
+<div class="heading">
+
+<h2>
+Featured Tour Packages
+</h2>
+
+<p>
+Explore our most loved destinations around the world.
+</p>
+
+</div>
+
+<div class="row g-4">
+    <!-- ========= Package Card 1 ========= -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="package-card">
+
+<div class="package-image">
+
+<img src="images/maldives.jpg" class="img-fluid" alt="Maldives">
+
+<span class="days">5 Days / 4 Nights</span>
+
+<button class="wishlist">
+<i class="far fa-heart"></i>
+</button>
+
+</div>
+
+<div class="package-content">
+
+<h3>Maldives Paradise Escape</h3>
+
+<div class="package-info">
+
+<span>
+<i class="fa-solid fa-location-dot"></i>
+Maldives
+</span>
+
+<span class="rating">
+★★★★★ (245)
+</span>
+
+</div>
+
+<p>
+Experience crystal-clear waters, luxury resorts,
+private beaches and unforgettable sunsets.
+</p>
+
+<hr>
+
+<div class="price">
+
+₹89,999
+
+<small>/ person</small>
+
+</div>
+
+<button class="explore-btn">
+
+Explore Package
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ========= Package Card 2 ========= -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="package-card">
+
+<div class="package-image">
+
+<img src="images/swiss.jpg" class="img-fluid">
+
+<span class="days">
+6 Days / 5 Nights
+</span>
+
+<button class="wishlist">
+<i class="far fa-heart"></i>
+</button>
+
+</div>
+
+<div class="package-content">
+
+<h3>Swiss Alps Adventure</h3>
+
+<div class="package-info">
+
+<span>
+<i class="fa-solid fa-location-dot"></i>
+Switzerland
+</span>
+
+<span class="rating">
+★★★★★ (189)
+</span>
+
+</div>
+
+<p>
+
+Enjoy breathtaking mountains,
+snow adventures,
+and scenic train journeys.
+
+</p>
+
+<hr>
+
+<div class="price">
+
+₹94,999
+
+<small>/ person</small>
+
+</div>
+
+<button class="explore-btn">
+
+Explore Package
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ========= Package Card 3 ========= -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="package-card">
+
+<div class="package-image">
+
+<img src="images/bali.jpg" class="img-fluid">
+
+<span class="days">
+
+6 Days / 5 Nights
+
+</span>
+
+<button class="wishlist">
+
+<i class="far fa-heart"></i>
+
+</button>
+
+</div>
+
+<div class="package-content">
+
+<h3>Bali Bliss Retreat</h3>
+
+<div class="package-info">
+
+<span>
+
+<i class="fa-solid fa-location-dot"></i>
+
+Indonesia
+
+</span>
+
+<span class="rating">
+
+★★★★☆ (312)
+
+</span>
+
+</div>
+
+<p>
+
+Relax with tropical beaches,
+beautiful temples
+and luxury spa resorts.
+
+</p>
+
+<hr>
+
+<div class="price">
+
+₹69,999
+
+<small>/ person</small>
+
+</div>
+
+<button class="explore-btn">
+
+Explore Package
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ========= Package Card 4 ========= -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="package-card">
+
+<div class="package-image">
+
+<img src="images/dubai.jpg" class="img-fluid">
+
+<span class="days">
+
+4 Days / 3 Nights
+
+</span>
+
+<button class="wishlist">
+
+<i class="far fa-heart"></i>
+
+</button>
+
+</div>
+
+<div class="package-content">
+
+<h3>Dubai Luxury Tour</h3>
+
+<div class="package-info">
+
+<span>
+
+<i class="fa-solid fa-location-dot"></i>
+
+Dubai
+
+</span>
+
+<span class="rating">
+
+★★★★★ (420)
+
+</span>
+
+</div>
+
+<p>
+
+Luxury hotels,
+desert safari,
+Burj Khalifa
+and premium shopping.
+
+</p>
+
+<hr>
+
+<div class="price">
+
+₹74,999
+
+<small>/ person</small>
+
+</div>
+
+<button class="explore-btn">
+
+Explore Package
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ========= Package Card 5 ========= -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="package-card">
+
+<div class="package-image">
+
+<img src="images/paris.jpg" class="img-fluid">
+
+<span class="days">
+
+5 Days / 4 Nights
+
+</span>
+
+<button class="wishlist">
+
+<i class="far fa-heart"></i>
+
+</button>
+
+</div>
+
+<div class="package-content">
+
+<h3>Paris Getaway</h3>
+
+<div class="package-info">
+
+<span>
+
+<i class="fa-solid fa-location-dot"></i>
+
+France
+
+</span>
+
+<span class="rating">
+
+★★★★★ (534)
+
+</span>
+
+</div>
+
+<p>
+
+Visit Eiffel Tower,
+Seine River,
+Louvre Museum
+and enjoy French cuisine.
+
+</p>
+
+<hr>
+
+<div class="price">
+
+₹1,19,999
+
+<small>/ person</small>
+
+</div>
+
+<button class="explore-btn">
+
+Explore Package
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ========= Package Card 6 ========= -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="package-card">
+
+<div class="package-image">
+
+<img src="images/japan.jpg" class="img-fluid">
+
+<span class="days">
+
+8 Days / 7 Nights
+
+</span>
+
+<button class="wishlist">
+
+<i class="far fa-heart"></i>
+
+</button>
+
+</div>
+
+<div class="package-content">
+
+<h3>Japan Cherry Blossom</h3>
+
+<div class="package-info">
+
+<span>
+
+<i class="fa-solid fa-location-dot"></i>
+
+Japan
+
+</span>
+
+<span class="rating">
+
+★★★★★ (467)
+
+</span>
+
+</div>
+
+<p>
+
+Explore Tokyo,
+Kyoto,
+Mount Fuji
+and cherry blossoms.
+
+</p>
+
+<hr>
+
+<div class="price">
+
+₹1,44,999
+
+<small>/ person</small>
+
+</div>
+
+<button class="explore-btn">
+
+Explore Package
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ========= Package Card 7 ========= -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="package-card">
+
+<div class="package-image">
+
+<img src="images/thailand.jpg" class="img-fluid">
+
+<span class="days">
+
+6 Days / 5 Nights
+
+</span>
+
+<button class="wishlist">
+
+<i class="far fa-heart"></i>
+
+</button>
+
+</div>
+
+<div class="package-content">
+
+<h3>Thailand Explorer</h3>
+
+<div class="package-info">
+
+<span>
+
+<i class="fa-solid fa-location-dot"></i>
+
+Thailand
+
+</span>
+
+<span class="rating">
+
+★★★★☆ (356)
+
+</span>
+
+</div>
+
+<p>
+
+Island hopping,
+nightlife,
+Thai cuisine
+and tropical beaches.
+
+</p>
+
+<hr>
+
+<div class="price">
+
+₹64,999
+
+<small>/ person</small>
+
+</div>
+
+<button class="explore-btn">
+
+Explore Package
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ========= Package Card 8 ========= -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="package-card">
+
+<div class="package-image">
+
+<img src="images/rajasthan.jpg" class="img-fluid">
+
+<span class="days">
+
+5 Days / 4 Nights
+
+</span>
+
+<button class="wishlist">
+
+<i class="far fa-heart"></i>
+
+</button>
+
+</div>
+
+<div class="package-content">
+
+<h3>Royal Rajasthan</h3>
+
+<div class="package-info">
+
+<span>
+
+<i class="fa-solid fa-location-dot"></i>
+
+India
+
+</span>
+
+<span class="rating">
+
+★★★★☆ (421)
+
+</span>
+
+</div>
+
+<p>
+
+Discover forts,
+palaces,
+camel safaris
+and royal heritage.
+
+</p>
+
+<hr>
+
+<div class="price">
+
+₹28,999
+
+<small>/ person</small>
+
+</div>
+
+<button class="explore-btn">
+
+Explore Package
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+<!-- ========= Package Card 9 ========= -->
+
+<div class="col-lg-3 col-md-6">
+    <div class="package-card">
+        <div class="package-image">
+            <img src="images/santorini.jpg" class="img-fluid" alt="Santorini">
+            <span class="days">5 Days / 4 Nights</span>
+            <button class="wishlist">
+                <i class="far fa-heart"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="destinations.html">Destinations</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link packages-active" href="Packages.html">Tour Packages</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="About.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-                <button class="btn btn-primary rounded-pill px-4 fw-semibold">Plan Your Trip</button>
-            </div>
         </div>
-    </nav>
 
-    <!-- Packages Hero Section -->
-    <section class="packages-hero position-relative">
-        <div class="packages-hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
-        <div class="container position-relative z-1">
-            <div class="row align-items-center min-vh-75 py-5">
-                <div class="col-lg-8">
-                    <h1 class="packages-hero-title mb-4 fade-in">Handpicked Tour Packages</h1>
-                    <p class="packages-hero-subtitle mb-0 fade-in">Discover curated experiences and unforgettable journeys tailored for you.</p>
+        <div class="package-content">
+            <h3>Santorini Escape</h3>
+
+            <div class="package-info">
+                <span>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Greece
+                </span>
+
+                <span class="rating">
+                    ★★★★★ (287)
+                </span>
+            </div>
+
+            <p>
+                White-washed villages, blue domes,
+                luxury resorts and unforgettable sunsets.
+            </p>
+
+            <hr>
+
+            <div class="price">
+                ₹81,999
+                <small>/ person</small>
+            </div>
+
+            <button class="explore-btn">
+                Explore Package
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- ========= Package Card 10 ========= -->
+
+<div class="col-lg-3 col-md-6">
+    <div class="package-card">
+        <div class="package-image">
+            <img src="images/italy.jpg" class="img-fluid" alt="Italy">
+
+            <span class="days">
+                7 Days / 6 Nights
+            </span>
+
+            <button class="wishlist">
+                <i class="far fa-heart"></i>
+            </button>
+        </div>
+
+        <div class="package-content">
+
+            <h3>Italian Romance</h3>
+
+            <div class="package-info">
+
+                <span>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Italy
+                </span>
+
+                <span class="rating">
+                    ★★★★★ (456)
+                </span>
+
+            </div>
+
+            <p>
+                Rome, Venice,
+                Florence,
+                canals,
+                pizza and history.
+            </p>
+
+            <hr>
+
+            <div class="price">
+                ₹1,29,999
+                <small>/ person</small>
+            </div>
+
+            <button class="explore-btn">
+                Explore Package
+            </button>
+
+        </div>
+    </div>
+</div>
+
+<!-- ========= Package Card 11 ========= -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="package-card">
+
+<div class="package-image">
+
+<img src="images/egypt.jpg" class="img-fluid">
+
+<span class="days">
+
+6 Days / 5 Nights
+
+</span>
+
+<button class="wishlist">
+
+<i class="far fa-heart"></i>
+
+</button>
+
+</div>
+
+<div class="package-content">
+
+<h3>Egypt Wonders</h3>
+
+<div class="package-info">
+
+<span>
+
+<i class="fa-solid fa-location-dot"></i>
+
+Egypt
+
+</span>
+
+<span class="rating">
+
+★★★★☆ (276)
+
+</span>
+
+</div>
+
+<p>
+
+Explore pyramids,
+Nile cruises,
+ancient temples
+and desert adventures.
+
+</p>
+
+<hr>
+
+<div class="price">
+
+₹59,999
+
+<small>/ person</small>
+
+</div>
+
+<button class="explore-btn">
+
+Explore Package
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ========= Package Card 12 ========= -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="package-card">
+
+<div class="package-image">
+
+<img src="images/newzealand.jpg" class="img-fluid">
+
+<span class="days">
+
+10 Days / 9 Nights
+
+</span>
+
+<button class="wishlist">
+
+<i class="far fa-heart"></i>
+
+</button>
+
+</div>
+
+<div class="package-content">
+
+<h3>New Zealand Adventure</h3>
+
+<div class="package-info">
+
+<span>
+
+<i class="fa-solid fa-location-dot"></i>
+
+New Zealand
+
+</span>
+
+<span class="rating">
+
+★★★★★ (234)
+
+</span>
+
+</div>
+
+<p>
+
+Mountains,
+lakes,
+bungee jumping
+and beautiful landscapes.
+
+</p>
+
+<hr>
+
+<div class="price">
+
+₹1,79,999
+
+<small>/ person</small>
+
+</div>
+
+<button class="explore-btn">
+
+Explore Package
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ========= Package Card 13 ========= -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="package-card">
+
+<div class="package-image">
+
+<img src="images/australia.jpg" class="img-fluid">
+
+<span class="days">
+
+9 Days / 8 Nights
+
+</span>
+
+<button class="wishlist">
+
+<i class="far fa-heart"></i>
+
+</button>
+
+</div>
+
+<div class="package-content">
+
+<h3>Australia Explorer</h3>
+
+<div class="package-info">
+
+<span>
+
+<i class="fa-solid fa-location-dot"></i>
+
+Australia
+
+</span>
+
+<span class="rating">
+
+★★★★☆ (389)
+
+</span>
+
+</div>
+
+<p>
+
+Sydney Opera House,
+Great Barrier Reef
+and wildlife experiences.
+
+</p>
+
+<hr>
+
+<div class="price">
+
+₹1,54,999
+
+<small>/ person</small>
+
+</div>
+
+<button class="explore-btn">
+
+Explore Package
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ========= Package Card 14 ========= -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="package-card">
+
+<div class="package-image">
+
+<img src="images/greece.jpg" class="img-fluid">
+
+<span class="days">
+
+8 Days / 7 Nights
+
+</span>
+
+<button class="wishlist">
+
+<i class="far fa-heart"></i>
+
+</button>
+
+</div>
+
+<div class="package-content">
+
+<h3>Greek Islands Tour</h3>
+
+<div class="package-info">
+
+<span>
+
+<i class="fa-solid fa-location-dot"></i>
+
+Greece
+
+</span>
+
+<span class="rating">
+
+★★★★☆ (312)
+
+</span>
+
+</div>
+
+<p>
+
+Mykonos,
+Santorini,
+beautiful beaches
+and nightlife.
+
+</p>
+
+<hr>
+
+<div class="price">
+
+₹1,34,999
+
+<small>/ person</small>
+
+</div>
+
+<button class="explore-btn">
+
+Explore Package
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ========= Package Card 15 ========= -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="package-card">
+
+<div class="package-image">
+
+<img src="images/costarica.jpg" class="img-fluid">
+
+<span class="days">
+
+6 Days / 5 Nights
+
+</span>
+
+<button class="wishlist">
+
+<i class="far fa-heart"></i>
+
+</button>
+
+</div>
+
+<div class="package-content">
+
+<h3>Costa Rica Eco Tour</h3>
+
+<div class="package-info">
+
+<span>
+
+<i class="fa-solid fa-location-dot"></i>
+
+Costa Rica
+
+</span>
+
+<span class="rating">
+
+★★★★☆ (189)
+
+</span>
+
+</div>
+
+<p>
+
+Rainforests,
+volcanoes,
+wildlife
+and eco adventures.
+
+</p>
+
+<hr>
+
+<div class="price">
+
+₹54,999
+
+<small>/ person</small>
+
+</div>
+
+<button class="explore-btn">
+
+Explore Package
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ========= Package Card 16 ========= -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="package-card">
+
+<div class="package-image">
+
+<img src="images/honeymoon.jpg" class="img-fluid">
+
+<span class="days">
+
+7 Days / 6 Nights
+
+</span>
+
+<button class="wishlist">
+
+<i class="far fa-heart"></i>
+
+</button>
+
+</div>
+
+<div class="package-content">
+
+<h3>Luxury Honeymoon</h3>
+
+<div class="package-info">
+
+<span>
+
+<i class="fa-solid fa-location-dot"></i>
+
+Worldwide
+
+</span>
+
+<span class="rating">
+
+★★★★★ (198)
+
+</span>
+
+</div>
+
+<p>
+
+Romantic resorts,
+private beaches,
+luxury dining
+and unforgettable memories.
+
+</p>
+
+<hr>
+
+<div class="price">
+
+₹99,999
+
+<small>/ person</small>
+
+</div>
+
+<button class="explore-btn">
+
+Explore Package
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="newsletter-section py-5">
+
+    <div class="container">
+
+        <div class="newsletter-box">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-6">
+
+                    <h2>
+                        Get Travel Inspiration &
+                        Exclusive Deals
+                    </h2>
+
+                    <p>
+                        Subscribe to receive exclusive offers,
+                        latest tour packages,
+                        travel tips and destination guides.
+                    </p>
+
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Filter Panel -->
-    <section class="filter-section">
-        <div class="container">
-            <div class="filter-panel">
-                <div class="row g-3">
-                    <div class="col-lg-3 col-md-6">
-                        <label class="form-label">Search Packages</label>
+                <div class="col-lg-6">
+
+                    <form id="newsletterForm">
+
                         <div class="input-group">
-                            <span class="input-group-text bg-light"><i class="fas fa-search text-primary"></i></span>
-                            <input type="text" id="packageSearch" class="form-control bg-light" placeholder="Search packages or locations...">
+
+                            <input
+                                type="email"
+                                class="form-control"
+                                placeholder="Enter your email"
+                                required>
+
+                            <button class="btn btn-warning">
+
+                                Subscribe
+
+                            </button>
+
                         </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <label class="form-label">Category</label>
-                        <select id="categoryFilter" class="form-select">
-                            <option value="">All Categories</option>
-                            <option value="beach">Beach & Islands</option>
-                            <option value="adventure">Adventure</option>
-                            <option value="luxury">Luxury</option>
-                            <option value="romantic">Romantic</option>
-                            <option value="cultural">Cultural</option>
-                            <option value="honeymoon">Honeymoon</option>
-                        </select>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <label class="form-label">Duration</label>
-                        <select id="durationFilter" class="form-select">
-                            <option value="">Any Duration</option>
-                            <option value="short">3-5 Days</option>
-                            <option value="medium">6-7 Days</option>
-                            <option value="long">8+ Days</option>
-                        </select>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <label class="form-label">Budget</label>
-                        <select id="budgetFilter" class="form-select">
-                            <option value="">Any Budget</option>
-                            <option value="budget">Budget (₹0-₹50K)</option>
-                            <option value="mid">Mid-Range (₹50K-₹1L)</option>
-                            <option value="luxury">Luxury (₹1L+)</option>
-                        </select>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <label class="form-label">Rating</label>
-                        <select id="ratingFilter" class="form-select">
-                            <option value="">Any Rating</option>
-                            <option value="5">5 Stars</option>
-                            <option value="4">4+ Stars</option>
-                            <option value="3">3+ Stars</option>
-                        </select>
-                    </div>
-                    <div class="col-lg-1 col-md-6 d-flex align-items-end">
-                        <button id="resetFilters" class="btn-reset-filters w-100">
-                            <i class="fas fa-redo me-1"></i>Reset
-                        </button>
-                    </div>
+
+                    </form>
+
                 </div>
+
             </div>
+
         </div>
-    </section>
 
-    <!-- Packages Grid -->
-    <section class="packages-grid py-5">
-        <div class="container py-5">
-            <div class="text-center mb-5 fade-in">
-                <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-semibold mb-3">Premium Packages</span>
-                <h2 class="display-5 fw-bold text-dark">Featured Tour Packages</h2>
-                <p class="text-muted lead">Explore our handpicked tour packages designed for unforgettable experiences</p>
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-4">
+
+                <h3>
+
+                    <i class="fa-solid fa-plane-departure"></i>
+
+                    ChaloChale
+
+                </h3>
+
+                <p>
+
+                    Explore the world's most amazing
+                    destinations with carefully crafted
+                    travel experiences.
+
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+
+                </div>
+
             </div>
-            
-            <div class="row g-4" id="packagesGrid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;">
-                <!-- Maldives Paradise Escape -->
-                <div class="package-card-wrapper" data-category="beach" data-duration="medium" data-budget="luxury" data-rating="5">
-                    <div class="package-card-enhanced">
-                        <div class="package-image">
-                            <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&h=400&fit=crop&q=90" alt="Maldives Paradise Escape" loading="lazy">
-                            <span class="duration-badge">5 Days / 4 Nights</span>
-                            <span class="d-none discount-badge-image">15% OFF</span>
-                            <button class="wishlist-btn-package" data-package="Maldives Paradise Escape">
-                                <i class="fas fa-heart"></i>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="package-title">Maldives Paradise Escape</h5>
-                            <p class="package-destination"><i class="fas fa-map-marker-alt"></i>Maldives, Indian Ocean</p>
-                            <div class="package-rating">
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <span class="review-count">(245 reviews)</span>
-                            </div>
-                            <div class="package-highlights">
-                                <span class="highlight-tag"><i class="fas fa-umbrella-beach"></i>Beach</span>
-                                <span class="highlight-tag"><i class="fas fa-water"></i>Diving</span>
-                                <span class="highlight-tag"><i class="fas fa-spa"></i>Luxury</span>
-                            </div>
-                            <p class="package-description">Experience crystal clear waters, overwater villas, and unforgettable adventures in paradise. Enjoy water sports, spa treatments, and private beach dinners.</p>
-                            <div class="package-divider"></div>
-                            <div class="package-price">
-                                <span class="current-price">₹89,999</span>
-                                <span class="original-price">₹1,05,999</span>
-                                <span class="discount-badge">15% OFF</span>
-                            </div>
-                            <div class="package-buttons">
-                                <button class="btn-book-now"><i class="fas fa-calendar-check"></i>Explore Package</button>
-                                <button class="btn-view-details"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Swiss Alps Adventure -->
-                <div class="package-card-wrapper" data-category="adventure" data-duration="medium" data-budget="luxury" data-rating="5">
-                    <div class="package-card-enhanced">
-                        <div class="package-image">
-                            <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=600&h=400&fit=crop&q=90" alt="Swiss Alps Adventure" loading="lazy">
-                            <span class="duration-badge">6 Days / 5 Nights</span>
-                            <button class="wishlist-btn-package" data-package="Swiss Alps Adventure">
-                                <i class="fas fa-heart"></i>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="package-title">Swiss Alps Adventure</h5>
-                            <p class="package-destination"><i class="fas fa-map-marker-alt"></i>Switzerland, Europe</p>
-                            <div class="package-rating">
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <span class="review-count">(189 reviews)</span>
-                            </div>
-                            <div class="package-highlights">
-                                <span class="highlight-tag"><i class="fas fa-mountain"></i>Mountains</span>
-                                <span class="highlight-tag"><i class="fas fa-skiing"></i>Skiing</span>
-                                <span class="highlight-tag"><i class="fas fa-train"></i>Scenic</span>
-                            </div>
-                            <p class="package-description">Majestic mountain peaks, scenic train rides, and charming alpine villages await you. Experience skiing, hiking, and Swiss cuisine.</p>
-                            <div class="package-divider"></div>
-                            <div class="package-price">
-                                <span class="current-price">₹94,999</span>
-                                <span class="price-unit">/ per person</span>
-                            </div>
-                            <div class="package-buttons">
-                                <button class="btn-book-now"><i class="fas fa-calendar-check"></i>Explore Package</button>
-                                <button class="btn-view-details"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-lg-2">
 
-                <!-- Bali Bliss Retreat -->
-                <div class="package-card-wrapper" data-category="beach" data-duration="medium" data-budget="mid" data-rating="4">
-                    <div class="package-card-enhanced">
-                        <div class="package-image">
-                            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&h=400&fit=crop&q=90" alt="Bali Bliss Retreat" loading="lazy">
-                            <span class="duration-badge">6 Days / 5 Nights</span>
-                            <span class="d-none discount-badge-image">20% OFF</span>
-                            <button class="wishlist-btn-package" data-package="Bali Bliss Retreat">
-                                <i class="fas fa-heart"></i>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="package-title">Bali Bliss Retreat</h5>
-                            <p class="package-destination"><i class="fas fa-map-marker-alt"></i>Bali, Indonesia</p>
-                            <div class="package-rating">
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <span class="review-count">(312 reviews)</span>
-                            </div>
-                            <div class="package-highlights">
-                                <span class="highlight-tag"><i class="fas fa-om"></i>Temples</span>
-                                <span class="highlight-tag"><i class="fas fa-spa"></i>Wellness</span>
-                                <span class="highlight-tag"><i class="fas fa-umbrella-beach"></i>Beach</span>
-                            </div>
-                            <p class="package-description">Tropical paradise with ancient temples, rice terraces, and stunning beaches. Enjoy spa treatments, yoga retreats, and cultural experiences.</p>
-                            <div class="package-divider"></div>
-                            <div class="package-price">
-                                <span class="current-price">₹69,999</span>
-                                <span class="original-price">₹87,999</span>
-                                <span class="discount-badge">20% OFF</span>
-                            </div>
-                            <div class="package-buttons">
-                                <button class="btn-book-now"><i class="fas fa-calendar-check"></i>Explore Package</button>
-                                <button class="btn-view-details"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <h5>Company</h5>
 
-                <!-- Dubai Luxury Getaway -->
-                <div class="package-card-wrapper" data-category="luxury" data-duration="short" data-budget="luxury" data-rating="5">
-                    <div class="package-card-enhanced">
-                        <div class="package-image">
-                            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&h=400&fit=crop&q=90" alt="Dubai Luxury Getaway" loading="lazy">
-                            <span class="duration-badge">4 Days / 3 Nights</span>
-                            <button class="wishlist-btn-package" data-package="Dubai Luxury Getaway">
-                                <i class="fas fa-heart"></i>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="package-title">Dubai Luxury Getaway</h5>
-                            <p class="package-destination"><i class="fas fa-map-marker-alt"></i>Dubai, UAE</p>
-                            <div class="package-rating">
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <span class="review-count">(428 reviews)</span>
-                            </div>
-                            <p class="package-description">Experience opulence with skyscrapers, desert safaris, and world-class shopping. Enjoy luxury hotels, desert safaris, and breathtaking views.</p>
-                            <div class="package-divider"></div>
-                            <div class="package-price">
-                                <span class="current-price">₹74,999</span>
-                                <span class="price-unit">/ per person</span>
-                            </div>
-                            <button class="btn-explore-package">Explore Package</button>
-                        </div>
-                    </div>
-                </div>
+                <ul>
 
-                <!-- Santorini Romantic Retreat -->
-                <div class="package-card-wrapper" data-category="romantic" data-duration="medium" data-budget="luxury" data-rating="5">
-                    <div class="package-card-enhanced">
-                        <div class="package-image">
-                            <img src="https://images.unsplash.com/photo-1613395877344-13d4a79e4df1?w=600&h=400&fit=crop&q=90" alt="Santorini Romantic Retreat" loading="lazy">
-                            <span class="duration-badge">5 Days / 4 Nights</span>
-                            <button class="wishlist-btn-package" data-package="Santorini Romantic Retreat">
-                                <i class="fas fa-heart"></i>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="package-title">Santorini Romantic Retreat</h5>
-                            <p class="package-destination"><i class="fas fa-map-marker-alt"></i>Santorini, Greece</p>
-                            <div class="package-rating">
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <span class="review-count">(287 reviews)</span>
-                            </div>
-                            <p class="package-description">Iconic blue-domed churches, stunning sunsets, and Mediterranean romance. Enjoy wine tasting, sailing trips, and cliffside villages.</p>
-                            <div class="package-divider"></div>
-                            <div class="package-price">
-                                <span class="current-price">₹81,999</span>
-                                <span class="price-unit">/ per person</span>
-                            </div>
-                            <button class="btn-explore-package">Explore Package</button>
-                        </div>
-                    </div>
-                </div>
+                    <li><a href="About.html">About</a></li>
 
-                <!-- Thailand Island Explorer -->
-                <div class="package-card-wrapper" data-category="beach" data-duration="medium" data-budget="mid" data-rating="4">
-                    <div class="package-card-enhanced">
-                        <div class="package-image">
-                            <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=600&h=400&fit=crop&q=90" alt="Thailand Island Explorer" loading="lazy">
-                            <span class="duration-badge">6 Days / 5 Nights</span>
-                            <button class="wishlist-btn-package" data-package="Thailand Island Explorer">
-                                <i class="fas fa-heart"></i>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="package-title">Thailand Island Explorer</h5>
-                            <p class="package-destination"><i class="fas fa-map-marker-alt"></i>Thailand, Southeast Asia</p>
-                            <div class="package-rating">
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <span class="review-count">(356 reviews)</span>
-                            </div>
-                            <p class="package-description">Discover pristine beaches, vibrant culture, and exotic Thai cuisine. Enjoy island hopping, Thai massage, and night markets.</p>
-                            <div class="package-divider"></div>
-                            <div class="package-price">
-                                <span class="current-price">₹64,999</span>
-                                <span class="price-unit">/ per person</span>
-                            </div>
-                            <button class="btn-explore-package">Explore Package</button>
-                        </div>
-                    </div>
-                </div>
+                    <li><a href="#">Careers</a></li>
 
-                <!-- Royal Rajasthan Heritage Tour -->
-                <div class="package-card-wrapper" data-category="cultural" data-duration="medium" data-budget="budget" data-rating="4">
-                    <div class="package-card-enhanced">
-                        <div class="package-image">
-                            <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?w=600&h=400&fit=crop&q=90" alt="Royal Rajasthan Heritage Tour" loading="lazy">
-                            <span class="duration-badge">5 Days / 4 Nights</span>
-                            <button class="wishlist-btn-package" data-package="Royal Rajasthan Heritage Tour">
-                                <i class="fas fa-heart"></i>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="package-title">Royal Rajasthan Heritage Tour</h5>
-                            <p class="package-destination"><i class="fas fa-map-marker-alt"></i>Rajasthan, India</p>
-                            <div class="package-rating">
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <span class="review-count">(421 reviews)</span>
-                            </div>
-                            <p class="package-description">Explore majestic forts, opulent palaces, and rich cultural heritage of India. Enjoy camel safaris, folk performances, and royal hospitality.</p>
-                            <div class="package-divider"></div>
-                            <div class="package-price">
-                                <span class="current-price">₹28,999</span>
-                                <span class="price-unit">/ per person</span>
-                            </div>
-                            <button class="btn-explore-package">Explore Package</button>
-                        </div>
-                    </div>
-                </div>
+                    <li><a href="contact.html">Contact</a></li>
 
-                <!-- Romantic Honeymoon Special -->
-                <div class="package-card-wrapper" data-category="honeymoon" data-duration="medium" data-budget="luxury" data-rating="5">
-                    <div class="package-card-enhanced">
-                        <div class="package-image">
-                            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&h=400&fit=crop&q=90" alt="Romantic Honeymoon Special" loading="lazy">
-                            <span class="duration-badge">7 Days / 6 Nights</span>
-                            <button class="wishlist-btn-package" data-package="Romantic Honeymoon Special">
-                                <i class="fas fa-heart"></i>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="package-title">Romantic Honeymoon Special</h5>
-                            <p class="package-destination"><i class="fas fa-map-marker-alt"></i>Multiple Destinations</p>
-                            <div class="package-rating">
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <span class="review-count">(198 reviews)</span>
-                            </div>
-                            <p class="package-description">Perfect romantic getaway with luxury accommodations and intimate experiences. Enjoy private dinners, couples spa, and romantic excursions.</p>
-                            <div class="package-divider"></div>
-                            <div class="package-price">
-                                <span class="current-price">₹99,999</span>
-                                <span class="price-unit">/ per person</span>
-                            </div>
-                            <button class="btn-explore-package">Explore Package</button>
-                        </div>
-                    </div>
-                </div>
+                    <li><a href="#">Blog</a></li>
 
-                <!-- Paris Romantic Getaway -->
-                <div class="package-card-wrapper" data-category="romantic" data-duration="medium" data-budget="luxury" data-rating="5">
-                    <div class="package-card-enhanced">
-                        <div class="package-image">
-                            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&h=400&fit=crop&q=90" alt="Paris Romantic Getaway" loading="lazy">
-                            <span class="duration-badge">5 Days / 4 Nights</span>
-                            <span class="d-none discount-badge-image">20% OFF</span>
-                            <button class="wishlist-btn-package" data-package="Paris Romantic Getaway">
-                                <i class="fas fa-heart"></i>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="package-title">Paris Romantic Getaway</h5>
-                            <p class="package-destination"><i class="fas fa-map-marker-alt"></i>Paris, France</p>
-                            <div class="package-rating">
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <span class="review-count">(534 reviews)</span>
-                            </div>
-                            <div class="package-highlights">
-                                <span class="highlight-tag"><i class="fas fa-utensils"></i>Food</span>
-                                <span class="highlight-tag"><i class="fas fa-landmark"></i>Culture</span>
-                                <span class="highlight-tag"><i class="fas fa-heart"></i>Romantic</span>
-                            </div>
-                            <p class="package-description">Experience the city of love with iconic landmarks, world-class cuisine, and artistic treasures. Visit Eiffel Tower, Louvre Museum, and enjoy Seine River cruise.</p>
-                            <div class="package-divider"></div>
-                            <div class="package-price">
-                                <span class="current-price">₹1,19,999</span>
-                                <span class="original-price">₹1,49,999</span>
-                                <span class="discount-badge">20% OFF</span>
-                            </div>
-                            <div class="package-buttons">
-                                <button class="btn-book-now"><i class="fas fa-calendar-check"></i>Explore Package</button>
-                                <button class="btn-view-details"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </ul>
 
-                <!-- Japan Cherry Blossom Tour -->
-                <div class="package-card-wrapper" data-category="cultural" data-duration="long" data-budget="luxury" data-rating="5">
-                    <div class="package-card-enhanced">
-                        <div class="package-image">
-                            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&h=400&fit=crop&q=90" alt="Japan Cherry Blossom Tour" loading="lazy">
-                            <span class="duration-badge">8 Days / 7 Nights</span>
-                            <span class="d-none discount-badge-image">15% OFF</span>
-                            <button class="wishlist-btn-package" data-package="Japan Cherry Blossom Tour">
-                                <i class="fas fa-heart"></i>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="package-title">Japan Cherry Blossom Tour</h5>
-                            <p class="package-destination"><i class="fas fa-map-marker-alt"></i>Tokyo, Kyoto, Osaka</p>
-                            <div class="package-rating">
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <span class="review-count">(467 reviews)</span>
-                            </div>
-                            <div class="package-highlights">
-                                <span class="highlight-tag"><i class="fas fa-torii-gate"></i>Temples</span>
-                                <span class="highlight-tag"><i class="fas fa-tree"></i>Nature</span>
-                                <span class="highlight-tag"><i class="fas fa-city"></i>Modern</span>
-                            </div>
-                            <p class="package-description">Witness the breathtaking cherry blossoms while exploring ancient temples, modern cities, and traditional Japanese culture. Experience tea ceremonies and hot springs.</p>
-                            <div class="package-divider"></div>
-                            <div class="package-price">
-                                <span class="current-price">₹1,44,999</span>
-                                <span class="original-price">₹1,69,999</span>
-                                <span class="discount-badge">15% OFF</span>
-                            </div>
-                            <div class="package-buttons">
-                                <button class="btn-book-now"><i class="fas fa-calendar-check"></i>Explore Package</button>
-                                <button class="btn-view-details"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Australian Adventure -->
-                <div class="package-card-wrapper" data-category="adventure" data-duration="long" data-budget="luxury" data-rating="4">
-                    <div class="package-card-enhanced">
-                        <div class="package-image">
-                            <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=600&h=400&fit=crop&q=90" alt="Australian Adventure" loading="lazy">
-                            <span class="duration-badge">9 Days / 8 Nights</span>
-                            <button class="wishlist-btn-package" data-package="Australian Adventure">
-                                <i class="fas fa-heart"></i>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="package-title">Australian Adventure</h5>
-                            <p class="package-destination"><i class="fas fa-map-marker-alt"></i>Sydney, Melbourne, Cairns</p>
-                            <div class="package-rating">
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <span class="review-count">(389 reviews)</span>
-                            </div>
-                            <div class="package-highlights">
-                                <span class="highlight-tag"><i class="fas fa-water"></i>Beach</span>
-                                <span class="highlight-tag"><i class="fas fa-leaf"></i>Nature</span>
-                                <span class="highlight-tag"><i class="fas fa-kiwi-bird"></i>Wildlife</span>
-                            </div>
-                            <p class="package-description">Explore the Great Barrier Reef, iconic Sydney Opera House, and unique wildlife. Enjoy surfing, wildlife tours, and stunning coastal drives.</p>
-                            <div class="package-divider"></div>
-                            <div class="package-price">
-                                <span class="current-price">₹1,54,999</span>
-                                <span class="price-unit">/ per person</span>
-                            </div>
-                            <div class="package-buttons">
-                                <button class="btn-book-now"><i class="fas fa-calendar-check"></i>Explore Package</button>
-                                <button class="btn-view-details"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Egyptian Wonders Tour -->
-                <div class="package-card-wrapper" data-category="cultural" data-duration="medium" data-budget="mid" data-rating="4">
-                    <div class="package-card-enhanced">
-                        <div class="package-image">
-                            <img src="https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?w=600&h=400&fit=crop&q=90" alt="Egyptian Wonders Tour" loading="lazy">
-                            <span class="duration-badge">6 Days / 5 Nights</span>
-                            <span class="d-none discount-badge-image">25% OFF</span>
-                            <button class="wishlist-btn-package" data-package="Egyptian Wonders Tour">
-                                <i class="fas fa-heart"></i>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="package-title">Egyptian Wonders Tour</h5>
-                            <p class="package-destination"><i class="fas fa-map-marker-alt"></i>Cairo, Luxor, Aswan</p>
-                            <div class="package-rating">
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <span class="review-count">(276 reviews)</span>
-                            </div>
-                            <div class="package-highlights">
-                                <span class="highlight-tag"><i class="fas fa-monument"></i>History</span>
-                                <span class="highlight-tag"><i class="fas fa-landmark"></i>Pyramids</span>
-                                <span class="highlight-tag"><i class="fas fa-ship"></i>Nile</span>
-                            </div>
-                            <p class="package-description">Discover ancient pyramids, pharaonic temples, and the mystical Nile River. Explore Giza Pyramids, Valley of Kings, and enjoy Nile cruise.</p>
-                            <div class="package-divider"></div>
-                            <div class="package-price">
-                                <span class="current-price">₹59,999</span>
-                                <span class="original-price">₹79,999</span>
-                                <span class="discount-badge">25% OFF</span>
-                            </div>
-                            <div class="package-buttons">
-                                <button class="btn-book-now"><i class="fas fa-calendar-check"></i>Explore Package</button>
-                                <button class="btn-view-details"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Italian Romance & Culture -->
-                <div class="package-card-wrapper" data-category="romantic" data-duration="medium" data-budget="luxury" data-rating="5">
-                    <div class="package-card-enhanced">
-                        <div class="package-image">
-                            <img src="https://images.unsplash.com/photo-1529260830199-42c2315f7b42?w=600&h=400&fit=crop&q=90" alt="Italian Romance & Culture" loading="lazy">
-                            <span class="duration-badge">7 Days / 6 Nights</span>
-                            <button class="wishlist-btn-package" data-package="Italian Romance & Culture">
-                                <i class="fas fa-heart"></i>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="package-title">Italian Romance & Culture</h5>
-                            <p class="package-destination"><i class="fas fa-map-marker-alt"></i>Rome, Florence, Venice</p>
-                            <div class="package-rating">
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <span class="review-count">(456 reviews)</span>
-                            </div>
-                            <div class="package-highlights">
-                                <span class="highlight-tag"><i class="fas fa-pizza-slice"></i>Food</span>
-                                <span class="highlight-tag"><i class="fas fa-church"></i>Art</span>
-                                <span class="highlight-tag"><i class="fas fa-gondola"></i>Romantic</span>
-                            </div>
-                            <p class="package-description">Immerse yourself in Italian art, history, and cuisine. Visit Colosseum, Vatican City, canals of Venice, and enjoy authentic Italian gastronomy.</p>
-                            <div class="package-divider"></div>
-                            <div class="package-price">
-                                <span class="current-price">₹1,29,999</span>
-                                <span class="price-unit">/ per person</span>
-                            </div>
-                            <div class="package-buttons">
-                                <button class="btn-book-now"><i class="fas fa-calendar-check"></i>Explore Package</button>
-                                <button class="btn-view-details"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- New Zealand Adventure -->
-                <div class="package-card-wrapper" data-category="adventure" data-duration="long" data-budget="luxury" data-rating="5">
-                    <div class="package-card-enhanced">
-                        <div class="package-image">
-                            <img src="https://images.unsplash.com/photo-1507699622177-3888e921c5e7?w=600&h=400&fit=crop&q=90" alt="New Zealand Adventure" loading="lazy">
-                            <span class="duration-badge">10 Days / 9 Nights</span>
-                            <span class="d-none discount-badge-image">10% OFF</span>
-                            <button class="wishlist-btn-package" data-package="New Zealand Adventure">
-                                <i class="fas fa-heart"></i>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="package-title">New Zealand Adventure</h5>
-                            <p class="package-destination"><i class="fas fa-map-marker-alt"></i>Auckland, Queenstown, Christchurch</p>
-                            <div class="package-rating">
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <span class="review-count">(234 reviews)</span>
-                            </div>
-                            <div class="package-highlights">
-                                <span class="highlight-tag"><i class="fas fa-mountain"></i>Adventure</span>
-                                <span class="highlight-tag"><i class="fas fa-water"></i>Nature</span>
-                                <span class="highlight-tag"><i class="fas fa-film"></i>Film</span>
-                            </div>
-                            <p class="package-description">Experience breathtaking landscapes, adventure sports, and filming locations. Enjoy bungee jumping, glacier hiking, and scenic flights.</p>
-                            <div class="package-divider"></div>
-                            <div class="package-price">
-                                <span class="current-price">₹1,79,999</span>
-                                <span class="original-price">₹1,99,999</span>
-                                <span class="discount-badge">10% OFF</span>
-                            </div>
-                            <div class="package-buttons">
-                                <button class="btn-book-now"><i class="fas fa-calendar-check"></i>Explore Package</button>
-                                <button class="btn-view-details"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Greek Islands Hopping -->
-                <div class="package-card-wrapper" data-category="beach" data-duration="long" data-budget="luxury" data-rating="4">
-                    <div class="package-card-enhanced">
-                        <div class="package-image">
-                            <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?w=600&h=400&fit=crop&q=90" alt="Greek Islands Hopping" loading="lazy">
-                            <span class="duration-badge">8 Days / 7 Nights</span>
-                            <button class="wishlist-btn-package" data-package="Greek Islands Hopping">
-                                <i class="fas fa-heart"></i>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="package-title">Greek Islands Hopping</h5>
-                            <p class="package-destination"><i class="fas fa-map-marker-alt"></i>Mykonos, Santorini, Crete</p>
-                            <div class="package-rating">
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <span class="review-count">(312 reviews)</span>
-                            </div>
-                            <div class="package-highlights">
-                                <span class="highlight-tag"><i class="fas fa-umbrella-beach"></i>Beach</span>
-                                <span class="highlight-tag"><i class="fas fa-ship"></i>Ferry</span>
-                                <span class="highlight-tag"><i class="fas fa-wine-glass"></i>Nightlife</span>
-                            </div>
-                            <p class="package-description">Island hop through stunning Greek destinations with beautiful beaches, ancient ruins, and vibrant nightlife. Enjoy local cuisine and crystal clear waters.</p>
-                            <div class="package-divider"></div>
-                            <div class="package-price">
-                                <span class="current-price">₹1,34,999</span>
-                                <span class="price-unit">/ per person</span>
-                            </div>
-                            <div class="package-buttons">
-                                <button class="btn-book-now"><i class="fas fa-calendar-check"></i>Explore Package</button>
-                                <button class="btn-view-details"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Costa Rica Eco Adventure -->
-                <div class="package-card-wrapper" data-category="adventure" data-duration="medium" data-budget="mid" data-rating="4">
-                    <div class="package-card-enhanced">
-                        <div class="package-image">
-                            <img src="https://images.unsplash.com/photo-1518259102261-b40117eabbc9?w=600&h=400&fit=crop&q=90" alt="Costa Rica Eco Adventure" loading="lazy">
-                            <span class="duration-badge">6 Days / 5 Nights</span>
-                            <span class="d-none discount-badge-image">30% OFF</span>
-                            <button class="wishlist-btn-package" data-package="Costa Rica Eco Adventure">
-                                <i class="fas fa-heart"></i>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="package-title">Costa Rica Eco Adventure</h5>
-                            <p class="package-destination"><i class="fas fa-map-marker-alt"></i>San José, Monteverde, Arenal</p>
-                            <div class="package-rating">
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                                <span class="review-count">(189 reviews)</span>
-                            </div>
-                            <div class="package-highlights">
-                                <span class="highlight-tag"><i class="fas fa-leaf"></i>Nature</span>
-                                <span class="highlight-tag"><i class="fas fa-hiking"></i>Hiking</span>
-                                <span class="highlight-tag"><i class="fas fa-frog"></i>Wildlife</span>
-                            </div>
-                            <p class="package-description">Explore rainforests, volcanoes, and incredible biodiversity. Enjoy zip-lining, wildlife watching, hot springs, and sustainable eco-lodges.</p>
-                            <div class="package-divider"></div>
-                            <div class="package-price">
-                                <span class="current-price">₹54,999</span>
-                                <span class="original-price">₹78,999</span>
-                                <span class="discount-badge">30% OFF</span>
-                            </div>
-                            <div class="package-buttons">
-                                <button class="btn-book-now"><i class="fas fa-calendar-check"></i>Explore Package</button>
-                                <button class="btn-view-details"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
+
+            <div class="col-lg-3">
+
+                <h5>Popular Tours</h5>
+
+                <ul>
+
+                    <li><a href="#">Maldives</a></li>
+
+                    <li><a href="#">Switzerland</a></li>
+
+                    <li><a href="#">Dubai</a></li>
+
+                    <li><a href="#">Japan</a></li>
+
+                    <li><a href="#">Bali</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <h5>Contact</h5>
+
+                <p>
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    +91 98765 43210
+
+                </p>
+
+                <p>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    info@chalochale.com
+
+                </p>
+
+                <p>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Hyderabad, Telangana
+
+                </p>
+
+            </div>
+
         </div>
-    </section>
 
-    <!-- Newsletter Section -->
-    <section class="container">
-        <div class="newsletter-section-packages">
-            <div class="row g-0">
-                <div class="col-lg-5">
-                    <div class="newsletter-image"></div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="newsletter-content">
-                        <h3>Get Travel Inspiration & Exclusive Deals</h3>
-                        <p>Subscribe to our newsletter and be the first to know about new destinations, special offers, and travel tips that will make your next journey unforgettable.</p>
-                        <form class="row g-3">
-                            <div class="col-md-8">
-                                <input type="email" class="form-control" placeholder="Enter your email address" required>
-                            </div>
-                            <div class="col-md-4">
-                                <button type="submit" class="btn btn-subscribe w-100">Subscribe Now</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+        <hr>
+
+        <div class="text-center">
+
+            <p>
+
+                © 2026 ChaloChale.
+
+                All Rights Reserved.
+
+            </p>
+
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer-section">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6">
-                    <div class="d-flex align-items-center mb-4">
-                        <i class="fas fa-plane-departure text-primary me-2 fs-4"></i>
-                        <span class="fw-bold fs-4"><span class="text-primary">Chalo</span><span class="text-white">Chale</span></span>
-                    </div>
-                    <p class="text-muted">Your trusted travel partner for amazing destinations and unforgettable journeys. We make travel dreams come true with personalized experiences.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <h5>Quick Links</h5>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="destinations.html">Destinations</a></li>
-                        <li><a href="Packages.html">Tour Packages</a></li>
-                        <li><a href="About.html">About Us</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <h5>Top Destinations</h5>
-                    <ul>
-                        <li><a href="#">Maldives</a></li>
-                        <li><a href="#">Switzerland</a></li>
-                        <li><a href="#">Greece</a></li>
-                        <li><a href="#">Thailand</a></li>
-                        <li><a href="#">Bali</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <h5>Support</h5>
-                    <ul>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Booking Policy</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Cancellation Policy</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5>Contact Us</h5>
-                    <div class="contact-info">
-                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
-                        <p><i class="fas fa-envelope"></i> info@chalochale.com</p>
-                        <p><i class="fas fa-map-marker-alt"></i> 123 Travel Street, Mumbai, India</p>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <p>© 2024 ChaloChale. All rights reserved.</p>
-                    </div>
-                    <div class="col-md-6 text-md-end">
-                        <p>Made with ❤️ for travelers</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/main.js"></script>
+</footer>
+
+<!-- ================= BOOTSTRAP JS ================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+
+<script src="main.js"></script>
+
 </body>
+
 </html>
