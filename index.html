@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ChaloChale - Your trusted travel partner for amazing destinations and unforgettable journeys">
+    <meta name="description" content="ChaloChale - Explore the world with premium travel packages, curated destinations, and unforgettable journeys.">
     <title>ChaloChale - Explore the World, Create Memories</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -12,11 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body>
-    <!-- Sticky Navigation Bar -->
-    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-white shadow-sm">
+<body id="top">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-white shadow-sm py-3">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
                 <i class="fas fa-plane-departure text-primary me-2"></i>
                 <span class="text-primary">Chalo</span><span class="text-dark">Chale</span>
             </a>
@@ -24,325 +23,185 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active text-primary fw-semibold" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="destinations.html">Destinations</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="Packages.html">Tour Packages</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="About.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="contact.html">Contact</a>
-                    </li>
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center text-lg-start">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Packages.html">Tour Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
-                <button class="btn btn-primary rounded-pill px-4 fw-semibold">Plan Your Trip</button>
+                <a class="btn btn-primary rounded-pill px-4 fw-semibold" href="login.html">Plan Your Trip</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section position-relative">
+    <section class="hero-section position-relative overflow-hidden">
         <div class="hero-bg position-absolute top-0 start-0 w-100 h-100"></div>
         <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
         <div class="container position-relative z-1 h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-lg-7 hero-content">
-                    <h1 class="hero-title text-white mb-4 fade-in">Explore the World, Create Memories</h1>
-                    <p class="hero-subtitle text-white-50 mb-0 fade-in">Discover amazing places, unique experiences and unforgettable journeys with ChaloChale.</p>
+            <div class="row align-items-center min-vh-80">
+                <div class="col-lg-7">
+                    <p class="text-uppercase text-white-50 mb-3 fw-semibold letter-spacing">Premium Travel Experiences</p>
+                    <h1 class="hero-title text-white mb-4 fade-in">Explore the World<br><span class="text-warning">Create Memories</span></h1>
+                    <p class="hero-subtitle text-white-75 mb-4 fade-in">Discover amazing places, unique experiences and unforgettable journeys with ChaloChale.</p>
+                    <a href="#packages" class="btn btn-outline-light btn-lg rounded-pill border-2 px-4 py-3 shadow-sm fade-in">Start Your Journey</a>
                 </div>
             </div>
         </div>
-        
-        <!-- Floating Search Box -->
-        <div class="container position-relative z-1">
-            <div class="row">
-                <div class="col-12">
-                    <div class="search-box-wrapper">
-                        <div class="search-box bg-white rounded-pill shadow-lg p-3 p-md-4 float-in">
-                            <form class="row g-2 g-md-3 align-items-center">
-                                <div class="col-12 col-md-3">
-                                    <div class="d-flex align-items-center px-3 py-2">
-                                        <i class="fas fa-map-marker-alt text-primary me-3 fs-5"></i>
-                                        <div class="flex-grow-1">
-                                            <label class="form-label text-muted small fw-semibold mb-0">Where to?</label>
-                                            <input type="text" class="form-control border-0 bg-transparent px-0 py-0 fw-medium" placeholder="Destination">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-3">
-                                    <div class="d-flex align-items-center px-3 py-2 border-start border-end">
-                                        <i class="fas fa-calendar text-primary me-3 fs-5"></i>
-                                        <div class="flex-grow-1">
-                                            <label class="form-label text-muted small fw-semibold mb-0">When</label>
-                                            <input type="date" class="form-control border-0 bg-transparent px-0 py-0 fw-medium">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-3">
-                                    <div class="d-flex align-items-center px-3 py-2">
-                                        <i class="fas fa-users text-primary me-3 fs-5"></i>
-                                        <div class="flex-grow-1">
-                                            <label class="form-label text-muted small fw-semibold mb-0">Travelers</label>
-                                            <select class="form-select border-0 bg-transparent px-0 py-0 fw-medium">
-                                                <option>1 Guest</option>
-                                                <option>2 Guests</option>
-                                                <option>3 Guests</option>
-                                                <option>4+ Guests</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-3">
-                                    <button type="submit" class="btn btn-explore w-100 rounded-pill fw-bold text-white">
-                                        Explore Now
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
     </section>
 
-    <!-- Featured Destinations -->
-    <section id="destinations" class="py-5">
+    <div class="container position-relative z-2">
+        <div class="search-box-wrapper mx-auto">
+            <div class="search-box bg-white rounded-5 shadow-lg p-4 p-lg-4">
+                <form class="row g-3 align-items-center" action="#" method="GET">
+                    <div class="col-12 col-md-4">
+                        <label class="form-label text-uppercase text-muted small mb-2">Where to?</label>
+                        <div class="input-group align-items-center rounded-4 border border-1 border-light overflow-hidden shadow-sm bg-white">
+                            <span class="input-group-text bg-white border-0 text-primary"><i class="fas fa-map-marker-alt fa-lg"></i></span>
+                            <input type="text" class="form-control bg-white border-0" placeholder="Search destinations" aria-label="Destination">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <label class="form-label text-uppercase text-muted small mb-2">When</label>
+                        <div class="input-group align-items-center rounded-4 border border-1 border-light overflow-hidden shadow-sm bg-white">
+                            <span class="input-group-text bg-white border-0 text-primary"><i class="fas fa-calendar-alt fa-lg"></i></span>
+                            <input type="date" class="form-control bg-white border-0" placeholder="dd-mm-yyyy" aria-label="Travel date">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <label class="form-label text-uppercase text-muted small mb-2">Travelers</label>
+                        <div class="input-group align-items-center rounded-4 border border-1 border-light overflow-hidden shadow-sm bg-white">
+                            <span class="input-group-text bg-white border-0 text-primary"><i class="fas fa-users fa-lg"></i></span>
+                            <input type="number" class="form-control bg-white border-0" placeholder="Add guests" min="1" aria-label="Guests">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-2 d-grid">
+                        <button type="submit" class="btn btn-primary btn-explore rounded-pill fw-bold py-3">Explore Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <section class="featured-destinations py-5" id="destinations">
         <div class="container py-5">
             <div class="text-center mb-5">
-                <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-semibold mb-3">Featured Destinations</span>
-                <h2 class="display-5 fw-bold text-dark">Top Destinations for You</h2>
-                <p class="text-muted lead">Explore our handpicked destinations loved by travelers worldwide</p>
+                <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-semibold mb-3">FEATURED DESTINATIONS</span>
+                <h2 class="display-5 fw-bold text-dark">Explore Popular Places</h2>
+                <p class="text-muted lead">Discover our most loved destinations with luxury stays and unforgettable experiences.</p>
             </div>
             <div class="row g-4">
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="card destination-card border-0 shadow-sm h-100">
-                        <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=400&h=300&fit=crop" class="card-img-top" alt="Maldives">
-                            <div class="position-absolute top-0 end-0 m-3">
-                                <span class="badge bg-white text-dark shadow-sm"><i class="fas fa-star text-warning me-1"></i>4.9</span>
-                            </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card destination-card border-0 overflow-hidden h-100 shadow-sm">
+                        <div class="destination-image position-relative overflow-hidden">
+                            <img src="https://i.pinimg.com/originals/ea/3d/26/ea3d26707a6ea31a9a29ea5abf05ffd2.jpg" class="img-fluid" alt="Maldives">
+                            <button class="wishlist-btn-package"><i class="far fa-heart"></i></button>
                         </div>
                         <div class="card-body">
-                            <h5 class="fw-bold mb-2">Maldives</h5>
-                            <p class="text-muted small mb-0">Paradise islands with crystal clear waters and luxury resorts</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="card destination-card border-0 shadow-sm h-100">
-                        <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=400&h=300&fit=crop" class="card-img-top" alt="Swiss Alps">
-                            <div class="position-absolute top-0 end-0 m-3">
-                                <span class="badge bg-white text-dark shadow-sm"><i class="fas fa-star text-warning me-1"></i>4.8</span>
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <h5 class="fw-bold mb-0">Maldives</h5>
+                                <span class="badge bg-warning text-dark">4.9</span>
                             </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="fw-bold mb-2">Swiss Alps</h5>
-                            <p class="text-muted small mb-0">Majestic mountains perfect for skiing and hiking adventures</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="card destination-card border-0 shadow-sm h-100">
-                        <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=400&h=300&fit=crop" class="card-img-top" alt="Santorini">
-                            <div class="position-absolute top-0 end-0 m-3">
-                                <span class="badge bg-white text-dark shadow-sm"><i class="fas fa-star text-warning me-1"></i>4.9</span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="fw-bold mb-2">Santorini</h5>
-                            <p class="text-muted small mb-0">Iconic white buildings with stunning sunsets over the Aegean</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="card destination-card border-0 shadow-sm h-100">
-                        <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&h=300&fit=crop" class="card-img-top" alt="Bali">
-                            <div class="position-absolute top-0 end-0 m-3">
-                                <span class="badge bg-white text-dark shadow-sm"><i class="fas fa-star text-warning me-1"></i>4.7</span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="fw-bold mb-2">Bali</h5>
-                            <p class="text-muted small mb-0">Tropical paradise with temples, rice terraces and beaches</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="card destination-card border-0 shadow-sm h-100">
-                        <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400&h=300&fit=crop" class="card-img-top" alt="Paris">
-                            <div class="position-absolute top-0 end-0 m-3">
-                                <span class="badge bg-white text-dark shadow-sm"><i class="fas fa-star text-warning me-1"></i>4.8</span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="fw-bold mb-2">Paris</h5>
-                            <p class="text-muted small mb-0">City of love with iconic Eiffel Tower and world-class art</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="card destination-card border-0 shadow-sm h-100">
-                        <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop" class="card-img-top" alt="Dubai">
-                            <div class="position-absolute top-0 end-0 m-3">
-                                <span class="badge bg-white text-dark shadow-sm"><i class="fas fa-star text-warning me-1"></i>4.7</span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="fw-bold mb-2">Dubai</h5>
-                            <p class="text-muted small mb-0">Futuristic city with luxury shopping and desert adventures</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="card destination-card border-0 shadow-sm h-100">
-                        <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?w=400&h=300&fit=crop" class="card-img-top" alt="Thailand">
-                            <div class="position-absolute top-0 end-0 m-3">
-                                <span class="badge bg-white text-dark shadow-sm"><i class="fas fa-star text-warning me-1"></i>4.6</span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="fw-bold mb-2">Thailand</h5>
-                            <p class="text-muted small mb-0">Exotic beaches, Buddhist temples and vibrant street life</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="card destination-card border-0 shadow-sm h-100">
-                        <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?w=400&h=300&fit=crop" class="card-img-top" alt="Jaipur">
-                            <div class="position-absolute top-0 end-0 m-3">
-                                <span class="badge bg-white text-dark shadow-sm"><i class="fas fa-star text-warning me-1"></i>4.5</span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="fw-bold mb-2">Jaipur</h5>
-                            <p class="text-muted small mb-0">Pink City with magnificent forts and royal palaces</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Popular Tour Packages -->
-    <section id="packages" class="py-5 bg-light">
-        <div class="container py-5">
-            <div class="text-center mb-5">
-                <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-semibold mb-3">Tour Packages</span>
-                <h2 class="display-5 fw-bold text-dark">Popular Tour Packages</h2>
-                <p class="text-muted lead">Curated travel experiences at unbeatable prices</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-12 col-lg-4">
-                    <div class="card package-card border-0 shadow-lg h-100">
-                        <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=400&h=250&fit=crop" class="card-img-top" alt="Maldives Package">
-                            <div class="position-absolute top-0 start-0 m-3">
-                                <span class="badge bg-primary text-white">5 Days</span>
-                            </div>
-                            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-3 wishlist-btn">
-                                <i class="far fa-heart text-danger"></i>
-                            </button>
-                        </div>
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <h5 class="fw-bold mb-0">Maldives Paradise</h5>
-                                <div class="text-warning small">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                            <p class="text-muted small mb-3"><i class="fas fa-map-marker-alt text-primary me-1"></i>Maldives</p>
-                            <p class="text-muted mb-4">Experience luxury overwater villas, pristine beaches, and world-class diving in this tropical paradise.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <span class="text-muted small">Starting from</span>
-                                    <h4 class="fw-bold text-primary mb-0">₹1,25,999</h4>
-                                </div>
-                                <a href="package-details.html" class="btn btn-primary rounded-pill px-4">Explore Package</a>
+                            <p class="text-muted small mb-3">Beachfront luxury and turquoise waters for the ultimate paradise escape.</p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="text-primary fw-bold">Starting ₹1,25,999</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">Explore</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4">
-                    <div class="card package-card border-0 shadow-lg h-100">
-                        <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=400&h=250&fit=crop" class="card-img-top" alt="Swiss Alps Package">
-                            <div class="position-absolute top-0 start-0 m-3">
-                                <span class="badge bg-primary text-white">7 Days</span>
-                            </div>
-                            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-3 wishlist-btn">
-                                <i class="far fa-heart text-danger"></i>
-                            </button>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card destination-card border-0 overflow-hidden h-100 shadow-sm">
+                        <div class="destination-image position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=900&h=700&fit=crop&q=90" class="img-fluid" alt="Switzerland">
+                            <button class="wishlist-btn-package"><i class="far fa-heart"></i></button>
                         </div>
                         <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <h5 class="fw-bold mb-0">Swiss Alps Adventure</h5>
-                                <div class="text-warning small">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <h5 class="fw-bold mb-0">Switzerland</h5>
+                                <span class="badge bg-warning text-dark">4.8</span>
                             </div>
-                            <p class="text-muted small mb-3"><i class="fas fa-map-marker-alt text-primary me-1"></i>Switzerland</p>
-                            <p class="text-muted mb-4">Discover breathtaking mountain scenery, charming villages, and thrilling outdoor activities.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <span class="text-muted small">Starting from</span>
-                                    <h4 class="fw-bold text-primary mb-0">₹1,89,999</h4>
-                                </div>
-                                <a href="package-details.html" class="btn btn-primary rounded-pill px-4">Explore Package</a>
+                            <p class="text-muted small mb-3">Snowy alpine resorts, cozy chalets, and scenic mountain vistas.</p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="text-primary fw-bold">Starting ₹1,89,999</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">Explore</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4">
-                    <div class="card package-card border-0 shadow-lg h-100">
-                        <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=400&h=250&fit=crop" class="card-img-top" alt="Santorini Package">
-                            <div class="position-absolute top-0 start-0 m-3">
-                                <span class="badge bg-primary text-white">6 Days</span>
-                            </div>
-                            <button class="btn btn-light rounded-circle position-absolute top-0 end-0 m-3 wishlist-btn">
-                                <i class="far fa-heart text-danger"></i>
-                            </button>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card destination-card border-0 overflow-hidden h-100 shadow-sm">
+                        <div class="destination-image position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?w=900&h=700&fit=crop&q=90" class="img-fluid" alt="Bali">
+                            <button class="wishlist-btn-package"><i class="far fa-heart"></i></button>
                         </div>
                         <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <h5 class="fw-bold mb-0">Santorini Romance</h5>
-                                <div class="text-warning small">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <h5 class="fw-bold mb-0">Bali</h5>
+                                <span class="badge bg-warning text-dark">4.7</span>
                             </div>
-                            <p class="text-muted small mb-3"><i class="fas fa-map-marker-alt text-primary me-1"></i>Greece</p>
-                            <p class="text-muted mb-4">Fall in love with stunning sunsets, white-washed buildings, and Mediterranean cuisine.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <span class="text-muted small">Starting from</span>
-                                    <h4 class="fw-bold text-primary mb-0">₹1,45,999</h4>
-                                </div>
-                                <a href="package-details.html" class="btn btn-primary rounded-pill px-4">Explore Package</a>
+                            <p class="text-muted small mb-3">Tropical temples, serene rice terraces, and beachfront indulgence.</p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="text-primary fw-bold">Starting ₹99,999</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card destination-card border-0 overflow-hidden h-100 shadow-sm">
+                        <div class="destination-image position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=900&q=80" class="img-fluid" alt="Dubai">
+                            <button class="wishlist-btn-package"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <h5 class="fw-bold mb-0">Dubai</h5>
+                                <span class="badge bg-warning text-dark">4.8</span>
+                            </div>
+                            <p class="text-muted small mb-3">Luxury city escapes with world-class shopping and desert adventures.</p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="text-primary fw-bold">Starting ₹1,19,999</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card destination-card border-0 overflow-hidden h-100 shadow-sm">
+                        <div class="destination-image position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&h=700&fit=crop&q=90" class="img-fluid" alt="Greece">
+                            <button class="wishlist-btn-package"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <h5 class="fw-bold mb-0">Greece</h5>
+                                <span class="badge bg-warning text-dark">4.8</span>
+                            </div>
+                            <p class="text-muted small mb-3">Historic islands, azure waters, and elegant coastal charm.</p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="text-primary fw-bold">Starting ₹1,15,999</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="card destination-card border-0 overflow-hidden h-100 shadow-sm">
+                        <div class="destination-image position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=900&q=80" class="img-fluid" alt="Thailand">
+                            <button class="wishlist-btn-package"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <h5 class="fw-bold mb-0">Thailand</h5>
+                                <span class="badge bg-warning text-dark">4.7</span>
+                            </div>
+                            <p class="text-muted small mb-3">Cultural escapes, vibrant street markets, and tropical coastlines.</p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <span class="text-primary fw-bold">Starting ₹89,999</span>
+                                <a href="#" class="btn btn-sm btn-outline-primary rounded-pill">Explore</a>
                             </div>
                         </div>
                     </div>
@@ -351,228 +210,266 @@
         </div>
     </section>
 
-    <!-- Why Choose Us -->
-    <section id="about" class="py-5">
+    <section class="why-choose-us py-5">
         <div class="container py-5">
             <div class="text-center mb-5">
-                <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-semibold mb-3">Why Choose Us</span>
-                <h2 class="display-5 fw-bold text-dark">What Makes Us Different</h2>
-                <p class="text-muted lead">We go above and beyond to make your travel dreams come true</p>
+                <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-semibold mb-3">WHY CHOOSE US</span>
+                <h2 class="display-5 fw-bold text-dark">Why Travel With ChaloChale?</h2>
+                <p class="text-muted lead">A premium travel experience tailored for comfort, choice, and peace of mind.</p>
             </div>
             <div class="row g-4">
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="feature-card text-center p-4 rounded-4 bg-white shadow-sm h-100">
+                    <div class="feature-card p-4 rounded-4 bg-white shadow-sm h-100 text-center">
                         <div class="feature-icon bg-primary-subtle rounded-circle d-inline-flex align-items-center justify-content-center mb-4">
                             <i class="fas fa-tags text-primary fa-2x"></i>
                         </div>
                         <h5 class="fw-bold mb-3">Best Price Guarantee</h5>
-                        <p class="text-muted mb-0">We offer competitive prices and match any lower price you find elsewhere.</p>
+                        <p class="text-muted mb-0">Competitive pricing on every trip with no hidden charges.</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="feature-card text-center p-4 rounded-4 bg-white shadow-sm h-100">
+                    <div class="feature-card p-4 rounded-4 bg-white shadow-sm h-100 text-center">
+                        <div class="feature-icon bg-primary-subtle rounded-circle d-inline-flex align-items-center justify-content-center mb-4">
+                            <i class="fas fa-map-marked-alt text-primary fa-2x"></i>
+                        </div>
+                        <h5 class="fw-bold mb-3">Handpicked Destinations</h5>
+                        <p class="text-muted mb-0">Every place is selected for authenticity, luxury, and unforgettable memories.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="feature-card p-4 rounded-4 bg-white shadow-sm h-100 text-center">
                         <div class="feature-icon bg-primary-subtle rounded-circle d-inline-flex align-items-center justify-content-center mb-4">
                             <i class="fas fa-headset text-primary fa-2x"></i>
                         </div>
                         <h5 class="fw-bold mb-3">24/7 Customer Support</h5>
-                        <p class="text-muted mb-0">Our dedicated team is available round the clock to assist you anytime.</p>
+                        <p class="text-muted mb-0">A dedicated team ready to assist you anytime, anywhere.</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-3">
-                    <div class="feature-card text-center p-4 rounded-4 bg-white shadow-sm h-100">
-                        <div class="feature-icon bg-primary-subtle rounded-circle d-inline-flex align-items-center justify-content-center mb-4">
-                            <i class="fas fa-gem text-primary fa-2x"></i>
-                        </div>
-                        <h5 class="fw-bold mb-3">Handpicked Experiences</h5>
-                        <p class="text-muted mb-0">Every destination and activity is carefully curated for authentic experiences.</p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="feature-card text-center p-4 rounded-4 bg-white shadow-sm h-100">
+                    <div class="feature-card p-4 rounded-4 bg-white shadow-sm h-100 text-center">
                         <div class="feature-icon bg-primary-subtle rounded-circle d-inline-flex align-items-center justify-content-center mb-4">
                             <i class="fas fa-shield-alt text-primary fa-2x"></i>
                         </div>
-                        <h5 class="fw-bold mb-3">Trusted & Secure</h5>
-                        <p class="text-muted mb-0">Your safety and security are our top priorities with verified partners.</p>
+                        <h5 class="fw-bold mb-3">Safe & Secure Booking</h5>
+                        <p class="text-muted mb-0">Trusted partners and secure payment systems for every booking.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Happy Travelers Testimonials -->
-    <section class="py-5 bg-light">
+    <section class="packages-section py-5 bg-light" id="packages">
         <div class="container py-5">
             <div class="text-center mb-5">
-                <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-semibold mb-3">Testimonials</span>
-                <h2 class="display-5 fw-bold text-dark">Happy Travelers</h2>
-                <p class="text-muted lead">See what our customers say about their experiences</p>
+                <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-semibold mb-3">POPULAR TOUR PACKAGES</span>
+                <h2 class="display-5 fw-bold text-dark">Premium Travel Packages</h2>
+                <p class="text-muted lead">Handpicked tours designed for luxury, adventure, and unforgettable experiences.</p>
             </div>
-            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-md-8 col-lg-6">
-                                <div class="testimonial-card bg-white p-5 rounded-4 shadow-sm text-center">
-                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" class="rounded-circle mb-4 mx-auto" alt="Customer" width="80" height="80">
-                                    <p class="text-muted mb-4 fst-italic">"ChaloChale made our honeymoon absolutely magical! The Maldives package was perfectly planned, and every detail was taken care of. Highly recommended!"</p>
-                                    <h5 class="fw-bold mb-1">Priya Sharma</h5>
-                                    <p class="text-muted small mb-0">Maldives Trip • March 2024</p>
-                                    <div class="text-warning mt-3">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
+            <div class="row g-4">
+                <div class="col-12 col-lg-4">
+                    <div class="card package-card border-0 shadow-lg h-100 overflow-hidden">
+                        <div class="package-image overflow-hidden position-relative">
+                            <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=900&h=600&fit=crop&q=90" class="img-fluid" alt="Maldives Package">
+                            <span class="duration-badge">5 Days</span>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-md-8 col-lg-6">
-                                <div class="testimonial-card bg-white p-5 rounded-4 shadow-sm text-center">
-                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" class="rounded-circle mb-4 mx-auto" alt="Customer" width="80" height="80">
-                                    <p class="text-muted mb-4 fst-italic">"The Swiss Alps adventure exceeded all expectations. From skiing to scenic train rides, everything was perfectly organized. Will definitely book again!"</p>
-                                    <h5 class="fw-bold mb-1">Rahul Verma</h5>
-                                    <p class="text-muted small mb-0">Switzerland Trip • February 2024</p>
-                                    <div class="text-warning mt-3">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                    </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold mb-2">Maldives Paradise</h5>
+                            <p class="text-muted mb-4">Luxury overwater villas, island dining, and private sea adventures.</p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <span class="text-muted small d-block">Starting from</span>
+                                    <h4 class="fw-bold text-primary mb-0">₹1,25,999</h4>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-md-8 col-lg-6">
-                                <div class="testimonial-card bg-white p-5 rounded-4 shadow-sm text-center">
-                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" class="rounded-circle mb-4 mx-auto" alt="Customer" width="80" height="80">
-                                    <p class="text-muted mb-4 fst-italic">"Santorini was a dream come true! The romantic package included everything we wanted. The sunset views were breathtaking. Thank you ChaloChale!"</p>
-                                    <h5 class="fw-bold mb-1">Ananya Patel</h5>
-                                    <p class="text-muted small mb-0">Greece Trip • January 2024</p>
-                                    <div class="text-warning mt-3">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
+                                <a href="#" class="btn btn-primary rounded-pill px-4">Book Now</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon bg-primary rounded-circle" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon bg-primary rounded-circle" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <div class="col-12 col-lg-4">
+                    <div class="card package-card border-0 shadow-lg h-100 overflow-hidden">
+                        <div class="package-image overflow-hidden position-relative">
+                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&h=600&fit=crop&q=90" class="img-fluid" alt="Bali Package">
+                            <span class="duration-badge">7 Days</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold mb-2">Bali Bliss Retreat</h5>
+                            <p class="text-muted mb-4">Tropical temples, rice terraces, and premium beachfront relaxation.</p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <span class="text-muted small d-block">Starting from</span>
+                                    <h4 class="fw-bold text-primary mb-0">₹1,09,999</h4>
+                                </div>
+                                <a href="#" class="btn btn-primary rounded-pill px-4">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card package-card border-0 shadow-lg h-100 overflow-hidden">
+                        <div class="package-image overflow-hidden position-relative">
+                            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=900&h=600&fit=crop&q=90" class="img-fluid" alt="Santorini Package">
+                            <span class="duration-badge">6 Days</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="fw-bold mb-2">Santorini Romance</h5>
+                            <p class="text-muted mb-4">Sunset cruises, cliffside dining, and luxury island vibes.</p>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <span class="text-muted small d-block">Starting from</span>
+                                    <h4 class="fw-bold text-primary mb-0">₹1,45,999</h4>
+                                </div>
+                                <a href="#" class="btn btn-primary rounded-pill px-4">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="py-5">
+    <section class="testimonials-section py-5">
         <div class="container py-5">
-            <div class="row align-items-center g-5">
-                <div class="col-12 col-lg-6">
-                    <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&h=400&fit=crop" class="img-fluid rounded-4 shadow-lg" alt="Travel Newsletter">
-                </div>
-                <div class="col-12 col-lg-6">
-                    <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-semibold mb-3">Newsletter</span>
-                    <h2 class="display-5 fw-bold text-dark mb-3">Get Travel Inspiration & Exclusive Deals</h2>
-                    <p class="text-muted mb-4">Subscribe to our newsletter and be the first to know about new destinations, special offers, and travel tips.</p>
-                    <form class="row g-3">
-                        <div class="col-12">
-                            <div class="input-group">
-                                <input type="email" class="form-control form-control-lg rounded-pill border-2" placeholder="Enter your email address">
-                                <button class="btn btn-primary rounded-pill px-4 fw-semibold" type="submit">Subscribe Now</button>
+            <div class="text-center mb-5">
+                <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill fw-semibold mb-3">TESTIMONIALS</span>
+                <h2 class="display-5 fw-bold text-dark">What Our Travelers Say</h2>
+                <p class="text-muted lead">Real reviews from travelers who fell in love with our curated journeys.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card testimonial-card border-0 shadow-sm h-100 p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&q=90" class="rounded-circle me-3" alt="Traveler 1" width="64" height="64">
+                            <div>
+                                <h6 class="fw-bold mb-0">Aisha Khan</h6>
+                                <p class="text-muted small mb-0">United Arab Emirates</p>
                             </div>
+                        </div>
+                        <div class="mb-3">
+                            <span class="text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+                        </div>
+                        <p class="text-muted mb-0">“ChaloChale crafted the perfect luxury escape for our honeymoon. Every detail was seamless and unforgettable.”</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card testimonial-card border-0 shadow-sm h-100 p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?w=100&h=100&fit=crop&q=90" class="rounded-circle me-3" alt="Traveler 2" width="64" height="64">
+                            <div>
+                                <h6 class="fw-bold mb-0">Rohan Patel</h6>
+                                <p class="text-muted small mb-0">India</p>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <span class="text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        </div>
+                        <p class="text-muted mb-0">“The team provided excellent support and exceptional package recommendations for our family trip.”</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card testimonial-card border-0 shadow-sm h-100 p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&q=90" class="rounded-circle me-3" alt="Traveler 3" width="64" height="64">
+                            <div>
+                                <h6 class="fw-bold mb-0">Mia Roberts</h6>
+                                <p class="text-muted small mb-0">Australia</p>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <span class="text-warning"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+                        </div>
+                        <p class="text-muted mb-0">“Luxury travel simplified. The experience was polished, premium, and truly memorable.”</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section py-5 bg-peach" id="newsletter">
+        <div class="container py-5">
+            <div class="newsletter-card row g-0 align-items-center">
+                <div class="col-lg-4">
+                    <div class="newsletter-image rounded-4 shadow-sm" role="img" aria-label="Travel accessories"></div>
+                </div>
+                <div class="col-lg-5 newsletter-content">
+                    <h2 class="fw-bold mb-3">Get Travel Inspiration & Exclusive Deals</h2>
+                    <p class="text-muted mb-0">Subscribe to our newsletter and get the best travel tips and offers straight to your inbox.</p>
+                </div>
+                <div class="col-lg-3 p-4">
+                    <form class="row g-2 newsletter-form" novalidate>
+                        <div class="col-12">
+                            <input type="email" class="form-control form-control-lg" placeholder="Enter your email address" required>
+                        </div>
+                        <div class="col-12 d-grid">
+                            <button type="submit" class="btn btn-primary btn-subscribe">Subscribe Now</button>
                         </div>
                     </form>
-                    <p class="text-muted small mt-3"><i class="fas fa-lock me-1"></i>We respect your privacy. Unsubscribe anytime.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="contact" class="bg-dark text-white pt-5 pb-3">
+    <footer class="footer-section py-5">
         <div class="container">
             <div class="row g-4 mb-5">
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-lg-3">
                     <a class="navbar-brand fw-bold text-white mb-3 d-block" href="index.html">
                         <i class="fas fa-plane-departure text-primary me-2"></i>
-                        <span class="text-primary">Chalo</span><span>Chale</span>
+                        <span class="text-primary">Chalo</span><span class="text-white">Chale</span>
                     </a>
-                    <p class="text-white-50 mb-4">Your trusted travel partner for creating unforgettable memories. We make travel dreams come true with curated experiences and exceptional service.</p>
+                    <p class="text-white-50 mb-4">Your trusted travel partner for unforgettable journeys. We make travel dreams come true with curated experiences and exceptional service.</p>
                     <div class="d-flex gap-3">
                         <a href="#" class="text-white-50 hover-primary"><i class="fab fa-facebook-f fa-lg"></i></a>
-                        <a href="#" class="text-white-50 hover-primary"><i class="fab fa-twitter fa-lg"></i></a>
                         <a href="#" class="text-white-50 hover-primary"><i class="fab fa-instagram fa-lg"></i></a>
-                        <a href="#" class="text-white-50 hover-primary"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                        <a href="#" class="text-white-50 hover-primary"><i class="fab fa-youtube fa-lg"></i></a>
+                        <a href="#" class="text-white-50 hover-primary"><i class="fab fa-x fa-lg"></i></a>
                     </div>
                 </div>
-                <div class="col-6 col-lg-2">
+                <div class="col-6 col-md-4 col-lg-2">
                     <h5 class="fw-bold mb-4">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Home</a></li>
-                        <li class="mb-2"><a href="#destinations" class="text-white-50 text-decoration-none hover-primary">Destinations</a></li>
-                        <li class="mb-2"><a href="#packages" class="text-white-50 text-decoration-none hover-primary">Tour Packages</a></li>
-                        <li class="mb-2"><a href="#about" class="text-white-50 text-decoration-none hover-primary">About Us</a></li>
-                        <li class="mb-2"><a href="#contact" class="text-white-50 text-decoration-none hover-primary">Contact</a></li>
+                    <ul class="list-unstyled footer-list">
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="destinations.html">Destinations</a></li>
+                        <li class="mb-2"><a href="Packages.html">Tour Packages</a></li>
+                        <li class="mb-2"><a href="About.html">About Us</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
-                <div class="col-6 col-lg-2">
+                <div class="col-6 col-md-4 col-lg-2">
                     <h5 class="fw-bold mb-4">Top Destinations</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Maldives</a></li>
-                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Switzerland</a></li>
-                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Greece</a></li>
-                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Bali</a></li>
-                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Paris</a></li>
+                    <ul class="list-unstyled footer-list">
+                        <li class="mb-2"><a href="#">Maldives</a></li>
+                        <li class="mb-2"><a href="#">Switzerland</a></li>
+                        <li class="mb-2"><a href="#">Greece</a></li>
+                        <li class="mb-2"><a href="#">Thailand</a></li>
+                        <li class="mb-2"><a href="#">Bali</a></li>
                     </ul>
                 </div>
-                <div class="col-6 col-lg-2">
+                <div class="col-6 col-md-4 col-lg-2">
                     <h5 class="fw-bold mb-4">Support</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Help Center</a></li>
-                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">FAQs</a></li>
-                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Cancellation Policy</a></li>
-                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Privacy Policy</a></li>
-                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Terms of Service</a></li>
+                    <ul class="list-unstyled footer-list">
+                        <li class="mb-2"><a href="#">FAQs</a></li>
+                        <li class="mb-2"><a href="#">Booking Policy</a></li>
+                        <li class="mb-2"><a href="#">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#">Terms & Conditions</a></li>
+                        <li class="mb-2"><a href="#">Cancellation Policy</a></li>
                     </ul>
                 </div>
-                <div class="col-12 col-lg-2">
+                <div class="col-12 col-lg-3">
                     <h5 class="fw-bold mb-4">Contact Us</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i>Mumbai, India</li>
+                    <ul class="list-unstyled text-white-50 footer-list">
                         <li class="mb-2"><i class="fas fa-phone text-primary me-2"></i>+91 98765 43210</li>
-                        <li class="mb-2"><i class="fas fa-envelope text-primary me-2"></i>hello@chalochale.com</li>
+                        <li class="mb-2"><i class="fas fa-envelope text-primary me-2"></i><a href="mailto:info@chalochale.com">info@chalochale.com</a></li>
+                        <li><i class="fas fa-map-marker-alt text-primary me-2"></i>123 Travel Street, New Delhi, India</li>
                     </ul>
                 </div>
             </div>
-            <hr class="border-secondary">
+            <hr class="section-divider my-4">
             <div class="row align-items-center">
-                <div class="col-12 col-md-6 text-center text-md-start">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                     <p class="text-white-50 mb-0">© 2024 ChaloChale. All rights reserved.</p>
                 </div>
-                <div class="col-12 col-md-6 text-center text-md-end">
-                    <p class="text-white-50 mb-0">Designed with <i class="fas fa-heart text-danger"></i> for travelers</p>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="text-white-50 mb-0">Made with <span class="text-danger">❤️</span> for travelers</p>
                 </div>
             </div>
         </div>

@@ -2,6 +2,9 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     const navbar = document.querySelector('.navbar');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const navLinks = document.querySelectorAll('.nav-link');
+
     const packageSearch = document.getElementById('packageSearch');
     const categoryFilter = document.getElementById('categoryFilter');
     const durationFilter = document.getElementById('durationFilter');
@@ -9,11 +12,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const ratingFilter = document.getElementById('ratingFilter');
     const resetFilters = document.getElementById('resetFilters');
     const packageCards = Array.from(document.querySelectorAll('article.package-card-enhanced'));
-    const packageGridItems = packageCards.map(card => card.closest('.col-xl-3, .col-lg-4, .col-md-6'));
-    const exploreButtons = document.querySelectorAll('.btn-explore-package');
-    const newsletterForm = document.querySelector('.newsletter-form');
-    const navLinks = document.querySelectorAll('.nav-link');
-    const navbarCollapse = document.querySelector('.navbar-collapse');
+
+    const destinationSearch = document.getElementById('destinationSearch');
+    const destCategoryFilter = document.getElementById('categoryFilter');
+    const destPriceFilter = document.getElementById('priceFilter');
+    const destRatingFilter = document.getElementById('ratingFilter');
+    const destDurationFilter = document.getElementById('durationFilter');
+    const destinationCards = Array.from(document.querySelectorAll('.destination-card-enhanced'));
+
+    const contactForm = document.querySelector('#contact-enquiry-form');
 
     function updateNavbarStyle() {
         if (window.scrollY > 50) {
@@ -35,42 +42,31 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function filterPackages() {
+        if (!packageCards.length) return;
+
         const query = packageSearch ? packageSearch.value.trim().toLowerCase() : '';
         const category = categoryFilter ? categoryFilter.value : '';
         const duration = durationFilter ? durationFilter.value : '';
         const budget = budgetFilter ? budgetFilter.value : '';
         const rating = ratingFilter ? ratingFilter.value : '';
 
-        packageCards.forEach((card, index) => {
+        packageCards.forEach(card => {
             const title = card.dataset.title.toLowerCase();
             const location = card.dataset.location.toLowerCase();
             const cardCategory = card.dataset.category.toLowerCase();
             const cardDuration = card.dataset.duration.toLowerCase();
             const cardBudget = card.dataset.budget.toLowerCase();
             const cardRating = card.dataset.rating.toLowerCase();
-
             let visible = true;
 
-            if (query && !(title.includes(query) || location.includes(query))) {
-                visible = false;
-            }
-            if (category && cardCategory !== category) {
-                visible = false;
-            }
-            if (duration && cardDuration !== duration) {
-                visible = false;
-            }
-            if (budget && cardBudget !== budget) {
-                visible = false;
-            }
-            if (rating && cardRating < rating) {
-                visible = false;
-            }
+            if (query && !(title.includes(query) || location.includes(query))) visible = false;
+            if (category && cardCategory !== category) visible = false;
+            if (duration && cardDuration !== duration) visible = false;
+            if (budget && cardBudget !== budget) visible = false;
+            if (rating && cardRating < rating) visible = false;
 
-            const wrapper = packageGridItems[index];
-            if (wrapper) {
-                wrapper.style.display = visible ? '' : 'none';
-            }
+            const wrapper = card.closest('.col-12, .col-md-6, .col-lg-4, .col-xl-3');
+            if (wrapper) wrapper.style.display = visible ? '' : 'none';
         });
     }
 
@@ -80,21 +76,64 @@ document.addEventListener('DOMContentLoaded', function () {
         if (durationFilter) durationFilter.value = '';
         if (budgetFilter) budgetFilter.value = '';
         if (ratingFilter) ratingFilter.value = '';
-        packageGridItems.forEach(item => {
-            if (item) item.style.display = '';
+        packageCards.forEach(card => {
+            const wrapper = card.closest('.col-12, .col-md-6, .col-lg-4, .col-xl-3');
+            if (wrapper) wrapper.style.display = '';
+        });
+    }
+
+    function filterDestinations() {
+        if (!destinationCards.length) return;
+
+        const query = destinationSearch ? destinationSearch.value.trim().toLowerCase() : '';
+        const category = destCategoryFilter ? destCategoryFilter.value : '';
+        const price = destPriceFilter ? destPriceFilter.value : '';
+        const rating = destRatingFilter ? destRatingFilter.value : '';
+        const duration = destDurationFilter ? destDurationFilter.value : '';
+
+        destinationCards.forEach(card => {
+            const title = card.dataset.title.toLowerCase();
+            const categoryValue = card.dataset.category.toLowerCase();
+            const priceValue = card.dataset.price.toLowerCase();
+            const ratingValue = card.dataset.rating.toLowerCase();
+            const durationValue = card.dataset.duration.toLowerCase();
+            const description = card.querySelector('p')?.textContent.toLowerCase() || '';
+
+            let visible = true;
+
+            if (query && !(title.includes(query) || description.includes(query))) visible = false;
+            if (category && categoryValue !== category) visible = false;
+            if (price && priceValue !== price) visible = false;
+            if (rating && ratingValue < rating) visible = false;
+            if (duration && durationValue !== duration) visible = false;
+
+            const wrapper = card.closest('.col-12, .col-sm-6, .col-lg-3');
+            if (wrapper) wrapper.style.display = visible ? '' : 'none';
+        });
+    }
+
+    function resetDestinationFilters() {
+        if (destinationSearch) destinationSearch.value = '';
+        if (destCategoryFilter) destCategoryFilter.value = '';
+        if (destPriceFilter) destPriceFilter.value = '';
+        if (destRatingFilter) destRatingFilter.value = '';
+        if (destDurationFilter) destDurationFilter.value = '';
+        destinationCards.forEach(card => {
+            const wrapper = card.closest('.col-12, .col-sm-6, .col-lg-3');
+            if (wrapper) wrapper.style.display = '';
         });
     }
 
     function toggleWishlist(button) {
         button.classList.toggle('active');
-        const heart = button.querySelector('.fa-heart');
-        if (!heart) return;
+        const icon = button.querySelector('i');
+        if (!icon) return;
         if (button.classList.contains('active')) {
-            heart.style.color = '#FF4757';
-            heart.style.transform = 'scale(1.2)';
-            setTimeout(() => { heart.style.transform = 'scale(1)'; }, 180);
+            icon.classList.remove('far');
+            icon.classList.add('fas', 'text-danger');
         } else {
-            heart.style.color = '#6B7280';
+            icon.classList.remove('fas', 'text-danger');
+            icon.classList.add('far');
         }
     }
 
@@ -108,13 +147,47 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }, { threshold: 0.12, rootMargin: '0px 0px -80px 0px' });
 
-        document.querySelectorAll('.fade-in, .package-card-enhanced').forEach(el => {
+        document.querySelectorAll('.fade-in, .fade-in-up, .package-card-enhanced, .package-card, .destination-card-enhanced, .destination-card').forEach(el => {
             observer.observe(el);
+        });
+    }
+
+    const loginForm = document.getElementById('loginForm');
+    const loginEmailInput = document.getElementById('loginEmail');
+    const loginPasswordInput = document.getElementById('loginPassword');
+
+    function setupContactFormValidation() {
+        if (!contactForm) return;
+
+        contactForm.addEventListener('submit', event => {
+            if (!contactForm.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            contactForm.classList.add('was-validated');
+        });
+    }
+
+    function setupLoginForm() {
+        if (!loginForm || !loginEmailInput || !loginPasswordInput) return;
+
+        loginForm.addEventListener('submit', event => {
+            event.preventDefault();
+            const email = loginEmailInput.value.trim();
+            const password = loginPasswordInput.value;
+
+            if (email === 'admin123@gmail.com' && password === 'admin123') {
+                window.location.href = 'index.html';
+            } else {
+                alert('Invalid login. Use admin123@gmail.com and password admin123.');
+            }
         });
     }
 
     updateNavbarStyle();
     setupFadeInObserver();
+    setupContactFormValidation();
+    setupLoginForm();
 
     window.addEventListener('scroll', updateNavbarStyle);
 
@@ -130,46 +203,25 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    if (packageSearch) {
-        packageSearch.addEventListener('input', filterPackages);
-    }
+    if (packageSearch) packageSearch.addEventListener('input', filterPackages);
     [categoryFilter, durationFilter, budgetFilter, ratingFilter].forEach(select => {
         if (select) select.addEventListener('change', filterPackages);
     });
-    if (resetFilters) {
-        resetFilters.addEventListener('click', function () {
-            resetPackageFilters();
-        });
-    }
+    if (resetFilters) resetFilters.addEventListener('click', function () {
+        resetPackageFilters();
+        resetDestinationFilters();
+    });
 
-    document.querySelectorAll('.wishlist-btn-package').forEach(btn => {
+    if (destinationSearch) destinationSearch.addEventListener('input', filterDestinations);
+    [destCategoryFilter, destPriceFilter, destRatingFilter, destDurationFilter].forEach(select => {
+        if (select) select.addEventListener('change', filterDestinations);
+    });
+
+    document.querySelectorAll('.wishlist-icon').forEach(btn => {
         btn.addEventListener('click', function () {
             toggleWishlist(this);
         });
     });
-
-    exploreButtons.forEach(btn => {
-        btn.addEventListener('click', function () {
-            const card = this.closest('article.package-card-enhanced');
-            if (!card) return;
-            const packageName = card.dataset.title || card.querySelector('.package-title')?.textContent;
-            alert(`Exploring package: ${packageName}\nRedirecting to package details...`);
-        });
-    });
-
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const emailInput = this.querySelector('input[type="email"]');
-            const email = emailInput ? emailInput.value.trim() : '';
-            if (email) {
-                alert(`Thank you for subscribing! You will receive travel inspiration and exclusive deals at: ${email}`);
-                this.reset();
-            } else {
-                alert('Please enter your email address');
-            }
-        });
-    }
 
     if (navbarCollapse && navLinks.length > 0) {
         navLinks.forEach(link => {
@@ -181,6 +233,4 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
-
-    console.log('ChaloChale: Packages page script loaded');
 });

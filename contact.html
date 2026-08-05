@@ -1,77 +1,187 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="description" content="Contact ChaloChale for bookings, travel assistance, and inquiries. Explore premium travel services with our luxury booking platform.">
+    <title>Contact - ChaloChale</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <!-- Navbar starts -->
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">ChaloChale</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./destinations.html">Destination</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Packages.html">Packing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./Booking.html">Booking</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-        <li class="nav-item">
-          <button type="button" class="btn btn-warning">Login</button>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<!-- Navbar ends -->
+    <header class="sticky-top bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+            <div class="container">
+                <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                    <i class="fas fa-plane-departure text-primary me-2"></i>
+                    <span class="text-primary">Chalo</span><span class="text-dark">Chale</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link text-dark" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="destinations.html">Destinations</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="Packages.html">Tour Packages</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="About.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    </ul>
+                    <a class="btn btn-primary rounded-pill px-4 fw-semibold" href="login.html">Plan Your Trip</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="contact-hero d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <p class="section-label">CONTACT US</p>
+                    <h1>Get in Touch</h1>
+                    <p class="lead">We are here to help you plan your next unforgettable journey. Reach out to us today.</p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-     <!-- footer -->
-    <footer id="contact" class="bg-dark text-white pt-5 pb-3">
+    <section class="contact-main py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-5 fade-in-up">
+                    <div class="contact-intro-card p-4 p-xl-5">
+                        <p class="section-label">CONTACT DETAILS</p>
+                        <h2 class="fw-bold mb-3">We'd Love to Hear From You</h2>
+                        <p class="text-muted mb-4">Whether you have a question about our tour packages, need assistance with a booking, or just want to say hello, our team is ready to answer all your questions.</p>
+
+                        <div class="contact-info-card p-4 mb-4">
+                            <div class="icon-holder mb-3"><i class="fas fa-map-marker-alt"></i></div>
+                            <h6>Office Headquarters</h6>
+                            <p class="mb-1 text-muted"><i class="fas fa-map-pin me-2 text-primary"></i>123 Travel Street, Connaught Place</p>
+                            <p class="text-muted"><i class="fas fa-city me-2 text-primary"></i>New Delhi, 110001, India</p>
+                        </div>
+                        <div class="contact-info-card p-4 mb-4">
+                            <div class="icon-holder mb-3"><i class="fas fa-phone-alt"></i></div>
+                            <h6>Phone Number</h6>
+                            <p class="mb-1 text-muted"><i class="fas fa-phone me-2 text-primary"></i>+91 98765 43210</p>
+                            <p class="text-muted"><i class="fas fa-clock me-2 text-primary"></i>Mon–Sat: 9 AM – 7 PM</p>
+                        </div>
+                        <div class="contact-info-card p-4">
+                            <div class="icon-holder mb-3"><i class="fas fa-envelope"></i></div>
+                            <h6>Email Address</h6>
+                            <p class="mb-1 text-muted"><i class="fas fa-paper-plane me-2 text-primary"></i><a href="mailto:info@chalochale.com" class="text-muted text-decoration-none">info@chalochale.com</a></p>
+                            <p class="text-muted"><i class="fas fa-headset me-2 text-primary"></i><a href="mailto:support@chalochale.com" class="text-muted text-decoration-none">support@chalochale.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 fade-in-up">
+                    <div class="contact-form-card p-4 p-xl-5">
+                        <h3 class="fw-bold mb-4">Send a Booking Enquiry</h3>
+                        <form id="contact-enquiry-form" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="fullName" class="form-label">Full Name *</label>
+                                    <input id="fullName" type="text" class="form-control form-control-lg" placeholder="John Doe" required>
+                                    <div class="invalid-feedback">Please enter your full name.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="emailAddress" class="form-label">Email Address *</label>
+                                    <input id="emailAddress" type="email" class="form-control form-control-lg" placeholder="john@example.com" required>
+                                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phoneNumber" class="form-label">Phone Number *</label>
+                                    <input id="phoneNumber" type="tel" class="form-control form-control-lg" placeholder="+91 90000 00000" required>
+                                    <div class="invalid-feedback">Please enter your phone number.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="destinationInterest" class="form-label">Destination of Interest</label>
+                                    <input id="destinationInterest" type="text" class="form-control form-control-lg" placeholder="E.g. Maldives, Swiss Alps">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="travelDate" class="form-label">Expected Travel Date</label>
+                                    <input id="travelDate" type="date" class="form-control form-control-lg">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="travelers" class="form-label">Number of Travelers</label>
+                                    <input id="travelers" type="number" class="form-control form-control-lg" placeholder="2" min="1">
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Your Message / Special Requests *</label>
+                                    <textarea id="message" class="form-control form-control-lg" rows="5" placeholder="Tell us about your dream trip..." required></textarea>
+                                    <div class="invalid-feedback">Please share your travel request.</div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100">Send Enquiry</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="container">
+            <div class="map-wrapper fade-in-up">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.0509088076267!2d77.21672117490584!3d28.631845682442434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1ed5b1ccba05%3A0xd2c0217e71aa00e!2sConnaught%20Place%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section py-5 bg-peach">
+        <div class="container">
+            <div class="newsletter-card row g-0 align-items-center">
+                <div class="col-lg-4">
+                    <div class="newsletter-image rounded-4 shadow-sm" role="img" aria-label="Travel kit illustration"></div>
+                </div>
+                <div class="col-lg-5 newsletter-content">
+                    <h3>Get Travel Inspiration & Exclusive Deals</h3>
+                    <p>Subscribe to our newsletter and get the best travel tips and offers straight to your inbox.</p>
+                </div>
+                <div class="col-lg-3 p-4">
+                    <form class="row g-2 newsletter-form" novalidate>
+                        <div class="col-12">
+                            <input type="email" class="form-control form-control-lg" placeholder="Enter your email address" required>
+                        </div>
+                        <div class="col-12 d-grid">
+                            <button type="submit" class="btn btn-primary btn-subscribe">Subscribe Now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section py-5">
         <div class="container">
             <div class="row g-4 mb-5">
                 <div class="col-12 col-lg-4">
                     <a class="navbar-brand fw-bold text-white mb-3 d-block" href="index.html">
                         <i class="fas fa-plane-departure text-primary me-2"></i>
-                        <span class="text-primary">Chalo</span><span>Chale</span>
+                        <span class="text-primary">Chalo</span><span class="text-white">Chale</span>
                     </a>
-                    <p class="text-white-50 mb-4">Your trusted travel partner for creating unforgettable memories. We make travel dreams come true with curated experiences and exceptional service.</p>
+                    <p class="text-white-50 mb-4">Your trusted travel partner for unforgettable journeys. We make travel dreams come true with curated experiences and exceptional service.</p>
                     <div class="d-flex gap-3">
                         <a href="#" class="text-white-50 hover-primary"><i class="fab fa-facebook-f fa-lg"></i></a>
-                        <a href="#" class="text-white-50 hover-primary"><i class="fab fa-twitter fa-lg"></i></a>
                         <a href="#" class="text-white-50 hover-primary"><i class="fab fa-instagram fa-lg"></i></a>
-                        <a href="#" class="text-white-50 hover-primary"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                        <a href="#" class="text-white-50 hover-primary"><i class="fab fa-youtube fa-lg"></i></a>
+                        <a href="#" class="text-white-50 hover-primary"><i class="fab fa-x fa-lg"></i></a>
                     </div>
                 </div>
                 <div class="col-6 col-lg-2">
                     <h5 class="fw-bold mb-4">Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Home</a></li>
-                        <li class="mb-2"><a href="#destinations" class="text-white-50 text-decoration-none hover-primary">Destinations</a></li>
-                        <li class="mb-2"><a href="#packages" class="text-white-50 text-decoration-none hover-primary">Tour Packages</a></li>
-                        <li class="mb-2"><a href="#about" class="text-white-50 text-decoration-none hover-primary">About Us</a></li>
-                        <li class="mb-2"><a href="#contact" class="text-white-50 text-decoration-none hover-primary">Contact</a></li>
+                        <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none hover-primary">Home</a></li>
+                        <li class="mb-2"><a href="destinations.html" class="text-white-50 text-decoration-none hover-primary">Destinations</a></li>
+                        <li class="mb-2"><a href="Packages.html" class="text-white-50 text-decoration-none hover-primary">Tour Packages</a></li>
+                        <li class="mb-2"><a href="About.html" class="text-white-50 text-decoration-none hover-primary">About Us</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white-50 text-decoration-none hover-primary">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-lg-2">
@@ -80,41 +190,42 @@
                         <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Maldives</a></li>
                         <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Switzerland</a></li>
                         <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Greece</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Thailand</a></li>
                         <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Bali</a></li>
-                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Paris</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-lg-2">
                     <h5 class="fw-bold mb-4">Support</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Help Center</a></li>
                         <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">FAQs</a></li>
-                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Cancellation Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Booking Policy</a></li>
                         <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Privacy Policy</a></li>
-                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Terms of Service</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Terms & Conditions</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none hover-primary">Cancellation Policy</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-lg-2">
                     <h5 class="fw-bold mb-4">Contact Us</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i>Mumbai, India</li>
+                    <ul class="list-unstyled text-white-50">
                         <li class="mb-2"><i class="fas fa-phone text-primary me-2"></i>+91 98765 43210</li>
-                        <li class="mb-2"><i class="fas fa-envelope text-primary me-2"></i>hello@chalochale.com</li>
+                        <li class="mb-2"><a href="mailto:info@chalochale.com" class="text-white-50 text-decoration-none">info@chalochale.com</a></li>
+                        <li>123 Travel Street, New Delhi, India</li>
                     </ul>
                 </div>
             </div>
-            <hr class="border-secondary">
+            <hr class="section-divider my-4">
             <div class="row align-items-center">
-                <div class="col-12 col-md-6 text-center text-md-start">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                     <p class="text-white-50 mb-0">© 2024 ChaloChale. All rights reserved.</p>
                 </div>
-                <div class="col-12 col-md-6 text-center text-md-end">
-                    <p class="text-white-50 mb-0">Designed with <i class="fas fa-heart text-danger"></i> for travelers</p>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="text-white-50 mb-0">Made with <span class="text-danger">❤️</span> for travelers</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>

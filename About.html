@@ -1,16 +1,21 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="description" content="Learn about ChaloChale, a premium travel booking platform that creates unforgettable journeys around the world.">
+    <title>About Us - ChaloChale</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body>
+<body id="top">
     <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-white">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
                 <i class="fas fa-plane-departure text-primary me-2"></i>
                 <span class="text-primary">Chalo</span><span class="text-dark">Chale</span>
             </a>
@@ -19,28 +24,191 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="destinations.html">Destinations</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link packages-active" href="Packages.html">Tour Packages</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="About.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="contact.html">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="destinations.html">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="Packages.html">Tour Packages</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="About.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="contact.html">Contact</a></li>
                 </ul>
-                <button class="btn btn-primary rounded-pill px-4 fw-semibold">Plan Your Trip</button>
+                <a class="btn btn-primary rounded-pill px-4 fw-semibold" href="login.html">Plan Your Trip</a>
             </div>
         </div>
     </nav>
 
-<footer class="footer-section">
+    <main>
+        <section class="hero-about d-flex align-items-center">
+            <div class="container hero-content">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p class="section-label fade-in">ABOUT CHALOCHALE</p>
+                        <h1 class="text-white fw-bold mb-4 fade-in">About ChaloChale</h1>
+                        <p class="lead fade-in">Your trusted partner in exploring the beauty of the world and creating lifelong memories.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-section py-5">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <span class="section-label fade-in">OUR STORY</span>
+                        <h2 class="fw-bold mb-4 fade-in">Redefining the Way You Travel</h2>
+                        <p class="fade-in">Founded with a passion for exploration, ChaloChale started as a small dream to make travel accessible, enjoyable, and deeply authentic for everyone. We believe that traveling is not just about visiting new places, but about connecting with diverse cultures and discovering yourself along the way.</p>
+                        <p class="fade-in">Over the years, we have grown into a trusted travel platform for thousands of adventurers, families, and solo travelers. Our unwavering commitment to quality, transparency, and customer satisfaction remains at the heart of everything we do.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="story-card overflow-hidden">
+                            <img src="https://chalo-chale.vercel.app/assets/images/about/our-story.jpg" alt="Passion Led Us Here">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mission-section py-5">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Mission & Vision</h2>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-5 fade-in">
+                        <div class="mission-card">
+                            <h5>Our Mission</h5>
+                            <p>To provide seamless, affordable, and deeply enriching travel experiences that connect people with the world's most beautiful destinations and cultures.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-5 fade-in">
+                        <div class="mission-card">
+                            <h5>Our Vision</h5>
+                            <p>To become the world's most customer-centric travel platform, inspiring a global community of mindful and passionate explorers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section py-5">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <span class="section-label fade-in">WHY CHOOSE US</span>
+                    <h2 class="fw-bold fade-in">Why Choose ChaloChale?</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3 fade-in">
+                        <div class="feature-card h-100 text-center p-4">
+                            <i class="fas fa-tags mb-3"></i>
+                            <h5>Best Price Guarantee</h5>
+                            <p>Get the best deals and unbeatable prices for amazing experiences.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 fade-in">
+                        <div class="feature-card h-100 text-center p-4">
+                            <i class="fas fa-headset mb-3"></i>
+                            <h5>24/7 Customer Support</h5>
+                            <p>We are here to help you anytime before, during and after your trip.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 fade-in">
+                        <div class="feature-card h-100 text-center p-4">
+                            <i class="fas fa-gem mb-3"></i>
+                            <h5>Handpicked Experiences</h5>
+                            <p>Curated tours and unique experiences just for you.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 fade-in">
+                        <div class="feature-card h-100 text-center p-4">
+                            <i class="fas fa-shield-alt mb-3"></i>
+                            <h5>Trusted & Secure</h5>
+                            <p>Safe bookings, secure payments and trusted travel partners.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section py-5">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <span class="section-label fade-in">OUR PEOPLE</span>
+                    <h2 class="fw-bold fade-in">Meet the Team</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-sm-6 col-lg-3 fade-in">
+                        <div class="team-card h-100">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80" alt="Ananya Sharma">
+                            <h5>Ananya Sharma</h5>
+                            <p class="text-muted">Founder & Chief Executive Officer</p>
+                            <div class="social-icons d-flex justify-content-center">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 fade-in">
+                        <div class="team-card h-100">
+                            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=300&q=80" alt="Rahul Verma">
+                            <h5>Rahul Verma</h5>
+                            <p class="text-muted">Travel Operations Manager</p>
+                            <div class="social-icons d-flex justify-content-center">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 fade-in">
+                        <div class="team-card h-100">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80" alt="Priya Mehta">
+                            <h5>Priya Mehta</h5>
+                            <p class="text-muted">Customer Experience Manager</p>
+                            <div class="social-icons d-flex justify-content-center">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 fade-in">
+                        <div class="team-card h-100">
+                            <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=300&q=80" alt="Karan Malhotra">
+                            <h5>Karan Malhotra</h5>
+                            <p class="text-muted">Senior Travel Consultant</p>
+                            <div class="social-icons d-flex justify-content-center">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter-section py-5 bg-peach">
+            <div class="container py-5">
+                <div class="newsletter-card row g-0 align-items-center">
+                    <div class="col-lg-4">
+                        <div class="newsletter-image rounded-4 shadow-sm" role="img" aria-label="Travel inspiration illustration"></div>
+                    </div>
+                    <div class="col-lg-5 newsletter-content">
+                        <span class="section-label">Newsletter</span>
+                        <h3 class="fw-bold mb-3">Get Travel Inspiration & Exclusive Deals</h3>
+                        <p>Subscribe to our newsletter and get the best travel tips and offers straight to your inbox.</p>
+                    </div>
+                    <div class="col-lg-3 p-4">
+                        <form class="row g-2 newsletter-form" novalidate>
+                            <div class="col-12">
+                                <input type="email" class="form-control form-control-lg" placeholder="Enter your email address" required>
+                            </div>
+                            <div class="col-12 d-grid">
+                                <button type="submit" class="btn btn-primary btn-subscribe">Subscribe Now</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-about py-5">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6">
@@ -48,17 +216,17 @@
                         <i class="fas fa-plane-departure text-primary me-2 fs-4"></i>
                         <span class="fw-bold fs-4"><span class="text-primary">Chalo</span><span class="text-white">Chale</span></span>
                     </div>
-                    <p class="text-muted">Your trusted travel partner for amazing destinations and unforgettable journeys. We make travel dreams come true with personalized experiences.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    <p>ChaloChale creates seamless travel experiences with curated destinations, expert planning, and unforgettable memories.</p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="text-white-50 hover-primary"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white-50 hover-primary"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white-50 hover-primary"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-white-50 hover-primary"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6">
-                    <h5>Quick Links</h5>
-                    <ul>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <ul class="list-unstyled footer-list">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="destinations.html">Destinations</a></li>
                         <li><a href="Packages.html">Tour Packages</a></li>
@@ -66,9 +234,9 @@
                         <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-2 col-md-6">
-                    <h5>Top Destinations</h5>
-                    <ul>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <h5 class="text-white mb-4">Top Destinations</h5>
+                    <ul class="list-unstyled footer-list">
                         <li><a href="#">Maldives</a></li>
                         <li><a href="#">Switzerland</a></li>
                         <li><a href="#">Greece</a></li>
@@ -76,9 +244,9 @@
                         <li><a href="#">Bali</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-2 col-md-6">
-                    <h5>Support</h5>
-                    <ul>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <h5 class="text-white mb-4">Support</h5>
+                    <ul class="list-unstyled footer-list">
                         <li><a href="#">FAQs</a></li>
                         <li><a href="#">Booking Policy</a></li>
                         <li><a href="#">Privacy Policy</a></li>
@@ -87,22 +255,21 @@
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h5>Contact Us</h5>
-                    <div class="contact-info">
-                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
-                        <p><i class="fas fa-envelope"></i> info@chalochale.com</p>
-                        <p><i class="fas fa-map-marker-alt"></i> 123 Travel Street, Mumbai, India</p>
-                    </div>
+                    <h5 class="text-white mb-4">Contact Us</h5>
+                    <ul class="list-unstyled text-white-50 footer-list">
+                        <li class="mb-3"><i class="fas fa-phone-alt me-2 text-primary"></i>+91 98765 43210</li>
+                        <li class="mb-3"><i class="fas fa-envelope me-2 text-primary"></i>hello@chalochale.com</li>
+                        <li><i class="fas fa-map-marker-alt me-2 text-primary"></i>Mumbai, India</li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <p>© 2024 ChaloChale. All rights reserved.</p>
-                    </div>
-                    <div class="col-md-6 text-md-end">
-                        <p>Made with ❤️ for travelers</p>
-                    </div>
+            <hr class="border-white-10 my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0 text-white-50">© 2024 ChaloChale. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0 text-white-50">Made with <span class="text-danger">❤️</span> for travelers</p>
                 </div>
             </div>
         </div>
