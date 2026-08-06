@@ -203,6 +203,33 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    document.querySelectorAll('form').forEach(form => {
+        const exploreButton = form.querySelector('button.btn-explore, input[type="submit"]');
+        if (!exploreButton) return;
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            window.location.href = 'booking.html';
+        });
+    });
+
+    document.querySelectorAll('a, button').forEach(element => {
+        const text = (element.textContent || '').trim().toLowerCase();
+        const isExploreAction = element.classList.contains('btn-explore') ||
+            element.classList.contains('btn-explore-package') ||
+            text.includes('explore now') ||
+            text.includes('explore package') ||
+            text.includes('explore destination') ||
+            text.includes('explore');
+
+        if (!isExploreAction || element.closest('form')) return;
+
+        element.addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = 'booking.html';
+        });
+    });
+
     if (packageSearch) packageSearch.addEventListener('input', filterPackages);
     [categoryFilter, durationFilter, budgetFilter, ratingFilter].forEach(select => {
         if (select) select.addEventListener('change', filterPackages);
@@ -233,4 +260,49 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
+
+    const bookingForm = document.getElementById('bookingForm');
+    const formMessage = document.getElementById('formMessage');
+    const revealItems = document.querySelectorAll('.reveal');
+
+    if (revealItems.length) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+
+        revealItems.forEach(item => revealObserver.observe(item));
+    }
+
+    if (bookingForm) {
+        bookingForm.addEventListener('submit', event => {
+            event.preventDefault();
+
+            if (!bookingForm.checkValidity()) {
+                bookingForm.classList.add('was-validated');
+                if (formMessage) {
+                    formMessage.textContent = 'Please complete the highlighted fields before continuing.';
+                }
+                return;
+            }
+
+            if (formMessage) {
+                formMessage.textContent = 'Thank you! Your booking request has been prepared successfully.';
+            }
+            bookingForm.reset();
+            bookingForm.classList.remove('was-validated');
+        });
+    }
+
+    document.querySelectorAll('.addon-card .btn').forEach(button => {
+        button.addEventListener('click', () => {
+            button.textContent = 'Added';
+            button.classList.remove('btn-outline-primary');
+            button.classList.add('btn-primary');
+        });
+    });
 });

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book a premium luxury vacation with ChaloChale - elegant, fully responsive travel booking experience.">
+    <title>ChaloChale | Premium Travel Booking</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-white shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <i class="fas fa-plane-departure text-primary me-2"></i>
+                <span class="text-primary">Chalo</span><span class="text-dark">Chale</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bookingNavbar" aria-controls="bookingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="bookingNavbar">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center text-lg-start">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Packages.html">Tour Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <a class="btn btn-primary rounded-pill px-4 fw-semibold" href="booking.html">Plan Your Trip</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="booking-hero">
+        <div class="hero-overlay"></div>
+        <div class="container h-100 d-flex align-items-center">
+            <div class="row w-100">
+                <div class="col-lg-8 hero-content reveal">
+                    <p class="hero-tag">Luxury Travel Concierge</p>
+                    <h1 class="display-4 fw-bold text-white mb-3">Book Your Dream Vacation</h1>
+                    <p class="lead text-white-75 mb-4">Plan your perfect journey in just a few simple steps. Let ChaloChale take care of the rest.</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#booking-form" class="btn btn-booking btn-lg rounded-pill px-4">Start Booking</a>
+                        <a href="#reviews" class="btn btn-outline-light btn-lg rounded-pill px-4">See Reviews</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container py-5">
+        <div class="progress-card reveal">
+            <div class="progress-title">Your Booking Journey</div>
+            <div class="progress-steps">
+                <div class="step step-complete">
+                    <span class="step-icon">1</span>
+                    <span class="step-label">Destination</span>
+                </div>
+                <div class="step step-complete">
+                    <span class="step-icon">2</span>
+                    <span class="step-label">Travelers</span>
+                </div>
+                <div class="step step-complete">
+                    <span class="step-icon">3</span>
+                    <span class="step-label">Personal Details</span>
+                </div>
+                <div class="step step-active">
+                    <span class="step-icon">4</span>
+                    <span class="step-label">Payment</span>
+                </div>
+                <div class="step">
+                    <span class="step-icon">5</span>
+                    <span class="step-label">Confirmation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking-section py-3 pb-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <form id="bookingForm" class="booking-form needs-validation reveal" novalidate>
+                        <div class="card rounded-4 border-0 shadow-sm p-4 p-lg-5">
+                            <div class="section-heading">
+                                <p class="section-tag">Trip Details</p>
+                                <h2 class="h3 fw-bold mb-0">Craft Your Escape</h2>
+                            </div>
+
+                            <div class="row g-3 mt-2">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold" for="destination">Destination</label>
+                                    <select class="form-select" id="destination" required>
+                                        <option value="">Choose destination</option>
+                                        <option value="Maldives">Maldives</option>
+                                        <option value="Bali">Bali</option>
+                                        <option value="Switzerland">Switzerland</option>
+                                        <option value="Dubai">Dubai</option>
+                                        <option value="Thailand">Thailand</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold" for="package">Tour Package</label>
+                                    <select class="form-select" id="package" required>
+                                        <option value="">Select package</option>
+                                        <option value="Ocean Retreat">Ocean Retreat</option>
+                                        <option value="Alpine Luxury">Alpine Luxury</option>
+                                        <option value="Island Escape">Island Escape</option>
+                                        <option value="Desert Royale">Desert Royale</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold" for="departureDate">Departure Date</label>
+                                    <input type="date" class="form-control" id="departureDate" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold" for="returnDate">Return Date</label>
+                                    <input type="date" class="form-control" id="returnDate" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label fw-semibold" for="adults">Adults</label>
+                                    <input type="number" class="form-control" id="adults" min="1" value="2" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label fw-semibold" for="children">Children</label>
+                                    <input type="number" class="form-control" id="children" min="0" value="0" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label fw-semibold" for="rooms">Rooms</label>
+                                    <input type="number" class="form-control" id="rooms" min="1" value="1" required>
+                                </div>
+                            </div>
+
+                            <div class="section-heading mt-5">
+                                <p class="section-tag">Traveler Information</p>
+                                <h2 class="h3 fw-bold mb-0">Who’s Traveling?</h2>
+                            </div>
+
+                            <div class="row g-3 mt-2">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold" for="fullName">Full Name</label>
+                                    <input type="text" class="form-control" id="fullName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold" for="email">Email Address</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold" for="phone">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold" for="nationality">Nationality</label>
+                                    <input type="text" class="form-control" id="nationality" required>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-semibold" for="passport">Passport Number</label>
+                                    <input type="text" class="form-control" id="passport" required>
+                                </div>
+                            </div>
+
+                            <div class="section-heading mt-5">
+                                <p class="section-tag">Additional Services</p>
+                                <h2 class="h3 fw-bold mb-0">Personalize Your Stay</h2>
+                            </div>
+
+                            <div class="row g-3 mt-2">
+                                <div class="col-md-6">
+                                    <div class="form-check custom-check">
+                                        <input class="form-check-input" type="checkbox" id="pickup">
+                                        <label class="form-check-label" for="pickup">Airport Pickup</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check custom-check">
+                                        <input class="form-check-input" type="checkbox" id="upgrade">
+                                        <label class="form-check-label" for="upgrade">Hotel Upgrade</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check custom-check">
+                                        <input class="form-check-input" type="checkbox" id="insurance">
+                                        <label class="form-check-label" for="insurance">Travel Insurance</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check custom-check">
+                                        <input class="form-check-input" type="checkbox" id="tour">
+                                        <label class="form-check-label" for="tour">Guided Tour</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check custom-check">
+                                        <input class="form-check-input" type="checkbox" id="meals">
+                                        <label class="form-check-label" for="meals">Meal Package</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="section-heading mt-5">
+                                <p class="section-tag">Special Requests</p>
+                                <h2 class="h3 fw-bold mb-0">Anything Else?</h2>
+                            </div>
+
+                            <div class="mt-3">
+                                <textarea class="form-control request-box" id="requests" rows="5" placeholder="Tell us about any special requirements..."></textarea>
+                            </div>
+
+                            <div class="mt-4 d-flex flex-wrap gap-3">
+                                <button type="submit" class="btn btn-booking btn-lg rounded-pill px-4">Proceed to Payment</button>
+                                <button type="reset" class="btn btn-outline-secondary rounded-pill px-4">Reset</button>
+                            </div>
+                            <div id="formMessage" class="form-message mt-3" role="status" aria-live="polite"></div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-lg-4">
+                    <aside class="booking-summary sticky-top reveal">
+                        <div class="summary-card">
+                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Luxury resort view">
+                            <div class="summary-body">
+                                <p class="summary-tag">Signature Package</p>
+                                <h3>Maldives Serenity</h3>
+                                <p class="summary-meta">7 Nights • Premium Beachfront • Flight Included</p>
+
+                                <div class="summary-info">
+                                    <div class="d-flex justify-content-between"><span>Destination</span><strong>Maldives</strong></div>
+                                    <div class="d-flex justify-content-between"><span>Duration</span><strong>7 Days / 6 Nights</strong></div>
+                                    <div class="d-flex justify-content-between"><span>Travel Dates</span><strong>15 - 22 Dec</strong></div>
+                                    <div class="d-flex justify-content-between"><span>Travelers</span><strong>2 Adults</strong></div>
+                                    <div class="d-flex justify-content-between"><span>Hotel</span><strong>Ocean Villa</strong></div>
+                                    <div class="d-flex justify-content-between"><span>Flight Included</span><strong>Yes</strong></div>
+                                </div>
+
+                                <div class="price-breakdown">
+                                    <div class="d-flex justify-content-between"><span>Base Price</span><span>$2,480</span></div>
+                                    <div class="d-flex justify-content-between"><span>Taxes</span><span>$320</span></div>
+                                    <div class="d-flex justify-content-between"><span>Service Fee</span><span>$180</span></div>
+                                    <div class="d-flex justify-content-between text-success"><span>Discount</span><span>- $150</span></div>
+                                </div>
+
+                                <div class="grand-total">
+                                    <span>Grand Total</span>
+                                    <strong>$2,830</strong>
+                                </div>
+
+                                <button type="button" class="btn btn-booking w-100 rounded-pill mt-3">Proceed to Payment</button>
+
+                                <div class="payment-methods mt-4">
+                                    <div class="payment-icons">
+                                        <span><i class="fab fa-cc-visa"></i></span>
+                                        <span><i class="fab fa-cc-mastercard"></i></span>
+                                        <span><i class="fab fa-cc-amex"></i></span>
+                                        <span><i class="fab fa-google-pay"></i></span>
+                                        <span><i class="fab fa-paypal"></i></span>
+                                    </div>
+                                    <p class="secure-payment"><i class="fas fa-lock"></i> Secure Payment Guaranteed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="addons-section py-5">
+        <div class="container">
+            <div class="section-heading text-center reveal">
+                <p class="section-tag">Popular Add-ons</p>
+                <h2 class="h2 fw-bold">Elevate Every Moment</h2>
+            </div>
+            <div class="row g-4 mt-2">
+                <div class="col-sm-6 col-lg-4 reveal">
+                    <div class="addon-card">
+                        <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80" alt="Adventure activities">
+                        <div class="addon-content">
+                            <h3>Adventure Activities</h3>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">$120</span>
+                                <button class="btn btn-sm btn-outline-primary rounded-pill">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 reveal">
+                    <div class="addon-card">
+                        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80" alt="Luxury hotel upgrade">
+                        <div class="addon-content">
+                            <h3>Luxury Hotel Upgrade</h3>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">$320</span>
+                                <button class="btn btn-sm btn-outline-primary rounded-pill">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 reveal">
+                    <div class="addon-card">
+                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=900&q=80" alt="City tour">
+                        <div class="addon-content">
+                            <h3>City Tour</h3>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">$85</span>
+                                <button class="btn btn-sm btn-outline-primary rounded-pill">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 reveal">
+                    <div class="addon-card">
+                        <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=900&q=80" alt="Airport transfer">
+                        <div class="addon-content">
+                            <h3>Airport Transfer</h3>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">$55</span>
+                                <button class="btn btn-sm btn-outline-primary rounded-pill">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 reveal">
+                    <div class="addon-card">
+                        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=900&q=80" alt="Cruise dinner">
+                        <div class="addon-content">
+                            <h3>Cruise Dinner</h3>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">$140</span>
+                                <button class="btn btn-sm btn-outline-primary rounded-pill">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 reveal">
+                    <div class="addon-card">
+                        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=900&q=80" alt="Travel insurance">
+                        <div class="addon-content">
+                            <h3>Travel Insurance</h3>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">$90</span>
+                                <button class="btn btn-sm btn-outline-primary rounded-pill">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews-section py-5 bg-white" id="reviews">
+        <div class="container">
+            <div class="section-heading text-center reveal">
+                <p class="section-tag">Customer Reviews</p>
+                <h2 class="h2 fw-bold">What Travelers Say</h2>
+            </div>
+            <div class="row g-4 mt-2">
+                <div class="col-lg-4 reveal">
+                    <div class="review-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Traveler profile" class="review-avatar">
+                            <div>
+                                <h3 class="h6 mb-0 fw-bold">Aisha Sharma</h3>
+                                <p class="text-muted small mb-0">India</p>
+                            </div>
+                        </div>
+                        <div class="text-warning mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-muted mb-0">“Every detail felt effortless. Our Maldives stay was luxurious, the transfers were seamless, and the support team was outstanding.”</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 reveal">
+                    <div class="review-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Traveler profile" class="review-avatar">
+                            <div>
+                                <h3 class="h6 mb-0 fw-bold">Daniel Brooks</h3>
+                                <p class="text-muted small mb-0">Canada</p>
+                            </div>
+                        </div>
+                        <div class="text-warning mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-muted mb-0">“The Alpine package was beautifully curated. From chalets to private transfers, everything felt thoughtfully designed.”</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 reveal">
+                    <div class="review-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="Traveler profile" class="review-avatar">
+                            <div>
+                                <h3 class="h6 mb-0 fw-bold">Mina Alvarez</h3>
+                                <p class="text-muted small mb-0">Spain</p>
+                            </div>
+                        </div>
+                        <div class="text-warning mb-2">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-muted mb-0">“A polished, premium experience from the first click to the final itinerary. ChaloChale truly understands elegant travel.”</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section py-5">
+        <div class="container">
+            <div class="section-heading text-center reveal">
+                <p class="section-tag">Frequently Asked Questions</p>
+                <h2 class="h2 fw-bold">Everything You Need to Know</h2>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <div class="col-lg-8 reveal">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Can I cancel my booking?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="faqOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Yes, cancellations are possible depending on the package and timing. Our support team will guide you through the best options.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    How do I receive my tickets?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">E-tickets are shared to your email inbox and also available in your traveler dashboard after confirmation.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Is travel insurance included?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Insurance is available as an optional add-on and can be selected during the booking process.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    What payment methods are accepted?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="faqFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">We accept Visa, MasterCard, American Express, UPI, Google Pay, and PayPal for secure online payments.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Can I modify my booking?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="faqFive" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Yes, changes can be made before departure and are subject to availability and fare rules.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section py-5">
+        <div class="container reveal">
+            <div class="newsletter-card">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-3">
+                        <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=600&q=80" alt="Traveler accessories" class="newsletter-image">
+                    </div>
+                    <div class="col-lg-5">
+                        <p class="section-tag mb-2">Exclusive Offers</p>
+                        <h3 class="fw-bold mb-3">Get Travel Inspiration & Exclusive Deals</h3>
+                        <p class="text-muted mb-0">Subscribe to our newsletter and receive exclusive travel offers, curated itineraries, and inspiration for your next escape.</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <form class="newsletter-form">
+                            <input type="email" class="form-control" placeholder="Enter your email" required>
+                            <button type="submit" class="btn btn-booking rounded-pill w-100 mt-3">Subscribe Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container py-5">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="fw-bold mb-3 text-white">Company</h3>
+                    <a class="navbar-brand fw-bold d-flex align-items-center mb-3" href="index.html">
+                        <i class="fas fa-plane-departure text-primary me-2"></i>
+                        <span class="text-primary">Chalo</span><span class="text-white">Chale</span>
+                    </a>
+                    <p class="text-white-50">Luxury travel experiences designed for unforgettable journeys, comfort, and seamless planning.</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h3 class="fw-bold mb-3 text-white">Quick Links</h3>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="Packages.html">Tour Packages</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h3 class="fw-bold mb-3 text-white">Popular Destinations</h3>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Maldives</a></li>
+                        <li><a href="#">Bali</a></li>
+                        <li><a href="#">Switzerland</a></li>
+                        <li><a href="#">Dubai</a></li>
+                        <li><a href="#">Thailand</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h3 class="fw-bold mb-3 text-white">Support</h3>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Booking Policy</a></li>
+                        <li><a href="#">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="fw-bold mb-3 text-white">Contact</h3>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+                        <li><a href="mailto:info@chalochale.com">info@chalochale.com</a></li>
+                        <li><span class="text-white-50">New Delhi, India</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                <span>© 2024 ChaloChale. All rights reserved.</span>
+                <span>Made with ❤️ for travelers</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
