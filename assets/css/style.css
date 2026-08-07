@@ -3,7 +3,10 @@
     --primary-dark: #E56A0A;
     --primary-orange: #FF7A1A;
     --dark-navy: #0F172A;
+    --white: #FFFFFF;
+    --light-gray: #F8F9FA;
     --soft-peach: #FFF2E8;
+    --border-gray: #E5E7EB;
     --text-dark: #0F172A;
     --text-muted: #6B7280;
     --text-muted-alt: #6B7280;
@@ -29,6 +32,35 @@ body {
     font-family: 'Poppins', sans-serif;
     color: var(--text-dark);
     background-color: var(--bg-light);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+}
+
+.navbar {
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.navbar .nav-link {
+    color: #1f2937;
+    font-weight: 500;
+    transition: color 0.25s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--primary-color);
 }
 
 .btn-primary, .btn-booking {
